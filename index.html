@@ -86,12 +86,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1-Java环境配置"><a href="#1-Java环境配置" class="headerlink" title="1. Java环境配置"></a>1. Java环境配置</h1><h3 id="1-JDK的下载"><a href="#1-JDK的下载" class="headerlink" title="1. JDK的下载"></a>1. JDK的下载</h3><pre><code>1. 由于我们安装的Eclipse是由Java写的，所以我们在下载Eclipse之前需要下载Java环境，即JDK或者JRE。
-2. 在Oracle的官网进行JDK的下载速度会比较慢，有以下几种方法加速  
-   + 将下载链接去掉https，因为下载时默认使用https，慢
-   + 使用下载工具， 百度，迅雷等
-   + 国内各大公司的镜像站，如[华为](https://repo.huaweicloud.com/java/jdk/),快到起飞
-   + 挂代理</code></pre><h3 id="2-配置环境变量"><a href="#2-配置环境变量" class="headerlink" title="2. 配置环境变量"></a>2. 配置环境变量</h3><ol>
+        <h1 id="1-Java环境配置"><a href="#1-Java环境配置" class="headerlink" title="1. Java环境配置"></a>1. Java环境配置</h1><h3 id="1-JDK的下载"><a href="#1-JDK的下载" class="headerlink" title="1. JDK的下载"></a>1. JDK的下载</h3><ol>
+<li>由于我们安装的Eclipse是由Java写的，所以我们在下载Eclipse之前需要下载Java环境，即JDK或者JRE。<ol start="2">
+<li>在Oracle的官网进行JDK的下载速度会比较慢，有以下几种方法加速  <ul>
+<li>将下载链接去掉https，因为下载时默认使用https，慢</li>
+<li>使用下载工具， 百度，迅雷等</li>
+<li>国内各大公司的镜像站，如<a href="https://repo.huaweicloud.com/java/jdk/" target="_blank" rel="noopener">华为</a>,快到起飞</li>
+<li>挂代理</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="2-配置环境变量"><a href="#2-配置环境变量" class="headerlink" title="2. 配置环境变量"></a>2. 配置环境变量</h3><ol>
 <li><p>在系统变量中设置2(或3)项属性，JAVA_HOME、PATH(、CLASSPATH),在使用1.5以上版本的JDK，不用设置CLASSPATH环境变量，也可以正常编译和运行JAVA程序</p>
 </li>
 <li><p>变量设置参数如下:    </p>
@@ -113,7 +120,10 @@
 <p>cmd中键入Java测试</p>
 </li>
 </ol>
-<h3 id="3-JAVA开发工具"><a href="#3-JAVA开发工具" class="headerlink" title="3. JAVA开发工具"></a>3. JAVA开发工具</h3><pre><code>1. Eclipse下载及安装</code></pre><h1 id="2-python常见问题"><a href="#2-python常见问题" class="headerlink" title="2. python常见问题"></a>2. python常见问题</h1><h3 id="1-pip更新"><a href="#1-pip更新" class="headerlink" title="1. pip更新"></a>1. pip更新</h3><p>   <code>python -m pip install --upgrade pip</code></p>
+<h3 id="3-JAVA开发工具"><a href="#3-JAVA开发工具" class="headerlink" title="3. JAVA开发工具"></a>3. JAVA开发工具</h3><ol>
+<li>Eclipse下载及安装</li>
+</ol>
+<h1 id="2-python常见问题"><a href="#2-python常见问题" class="headerlink" title="2. python常见问题"></a>2. python常见问题</h1><h3 id="1-pip更新"><a href="#1-pip更新" class="headerlink" title="1. pip更新"></a>1. pip更新</h3><p>   <code>python -m pip install --upgrade pip</code></p>
 <h3 id="2-pip临时更换镜像源"><a href="#2-pip临时更换镜像源" class="headerlink" title="2. pip临时更换镜像源"></a>2. pip临时更换镜像源</h3><p><code>pip install pythonModuleName -i https://pypi.douban.com/simple</code></p>
 <h3 id="3-pip更换镜像源（待续）"><a href="#3-pip更换镜像源（待续）" class="headerlink" title="3. pip更换镜像源（待续）"></a>3. pip更换镜像源（待续）</h3><h3 id="4-wheel文件"><a href="#4-wheel文件" class="headerlink" title="4. wheel文件"></a>4. wheel文件</h3><ol>
 <li><p>首先安装wheel文件的依赖  </p>
@@ -143,19 +153,14 @@
 </li>
 </ol>
 <h3 id="6-pylint"><a href="#6-pylint" class="headerlink" title="6. pylint"></a>6. pylint</h3><p>​       pylint是一个python代码分析工具，分析python代码中的错误，查找不符合代码风格标准有潜在问题的代码，它还提供了其他的功能，如检查一行代码的长度，变量名是否符合命名标准，一个声明过的接口是否被真正实现等等。  </p>
-<blockquote>
-<p>安装  </p>
-<p><code>pip install pylint</code>  </p>
+<p>安装:  <code>pip install pylint</code>  </p>
 <p><a href="https://www.jianshu.com/p/c0bd637f706d" target="_blank" rel="noopener">参考网址</a></p>
-</blockquote>
 <h1 id="3-github-加快git速度"><a href="#3-github-加快git速度" class="headerlink" title="3. github 加快git速度"></a>3. github 加快git速度</h1><h2 id="1-码云平台的转接"><a href="#1-码云平台的转接" class="headerlink" title="1.码云平台的转接"></a>1.码云平台的转接</h2><h3 id="1、从github到码云"><a href="#1、从github到码云" class="headerlink" title="1、从github到码云"></a>1、从github到码云</h3><ol>
 <li><p>首先确保码云上有账户，可以正常使用；</p>
 </li>
 <li><p>点击页面右上角新建仓库的加号 <code>+</code>，选择“从 <code>GitHub/GitLab</code>导入仓库”菜单；</p>
-<img src="https://mmbiz.qpic.cn/mmbiz_png/xq9PqibkVAzrQUnr62aOibZsG5lf4VpQicNuxDta6zrnRY62TUCX4blM8Eaw0EiabKh9YnculvcIpujPdztzum9Ang/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="导入github仓库" style="zoom: 50%;" />
 </li>
 <li><p>然后填写位于 <code>GitHub</code>上你想 <code>clone</code>的仓库地址并导入；</p>
-<img src="https://mmbiz.qpic.cn/mmbiz_png/xq9PqibkVAzrQUnr62aOibZsG5lf4VpQicN4jkGsI7gGEDP8VxGNNxGPkLia4oNzANkia5JTZcUibeDAYib5iblOW48Fjg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" style="zoom: 33%;" />
 </li>
 <li><p>接下来通过码云上的项目地址，将项目 <code>clone</code>到本地，这时候的clone速度就很快了，几 <code>MB/s</code>的速度是没问题的，很快项目就下载下来了。</p>
 </li>
@@ -166,8 +171,6 @@
 <li><p>首先找到位于本地仓库目录下的隐藏文件<code>.git</code></p>
 </li>
 <li><p>用文本编辑器打开<code>.git</code>文件夹中的<code>config</code>配置文件，将配置文件中的<code>[remote &quot;origin&quot;].url</code>字段重新关联到原来位于<code>Github</code>上的<code>Github</code>项目的地址。</p>
-<img src="https://mmbiz.qpic.cn/mmbiz_png/xq9PqibkVAzrQUnr62aOibZsG5lf4VpQicNQRick8gfWkrhSfjic8jRibK1kKkZL8y7VdEia7pL45KBoWUNIEIZfXpgIg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" style="zoom:50%;" />
-
 </li>
 </ol>
 <p><a href="https://mp.weixin.qq.com/s/SYR4zvjhAH1mX9fxdp8cbA" target="_blank" rel="noopener">一招搞定GitHub下载加速!</a></p>
@@ -175,7 +178,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/27/SomeProblemSolution/" data-id="ck8aac0tu0000dcl58tzu5u2n" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/27/SomeProblemSolution/" data-id="ck8aakaf20001t4l5b5ri2dmu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%88%91%E7%A2%B0%E8%A7%81%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/" rel="tag">我碰见的一些小问题</a></li></ul>
@@ -187,53 +190,9 @@
 
 
   
-    <article id="post-hello" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-InstructionOfHexo" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/03/23/hello/" class="article-date">
-  <time datetime="2020-03-23T03:10:05.000Z" itemprop="datePublished">2020-03-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/23/hello/">hello</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><p>this is my first blog</p>
-</li>
-<li><p>please 0 errors , no warning</p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/23/hello/" data-id="ck8aac0un0004dcl57zmm8vtc" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Frist-Use/" rel="tag">Frist Use</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/23/hello-world/" class="article-date">
+    <a href="/2020/03/23/InstructionOfHexo/" class="article-date">
   <time datetime="2020-03-23T03:08:28.884Z" itemprop="datePublished">2020-03-23</time>
 </a>
     
@@ -245,7 +204,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/23/hello-world/">Hello World</a>
+      <a class="article-title" href="/2020/03/23/InstructionOfHexo/">Hello World</a>
     </h1>
   
 
@@ -270,7 +229,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/23/hello-world/" data-id="ck8aac0ul0003dcl54feng3r9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/23/InstructionOfHexo/" data-id="ck8aakaeu0000t4l53zvu63pl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -293,7 +252,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Frist-Use/" rel="tag">Frist Use</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%88%91%E7%A2%B0%E8%A7%81%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/" rel="tag">我碰见的一些小问题</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%88%91%E7%A2%B0%E8%A7%81%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/" rel="tag">我碰见的一些小问题</a></li></ul>
     </div>
   </div>
 
@@ -303,7 +262,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Frist-Use/" style="font-size: 10px;">Frist Use</a> <a href="/tags/%E6%88%91%E7%A2%B0%E8%A7%81%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/" style="font-size: 10px;">我碰见的一些小问题</a>
+      <a href="/tags/%E6%88%91%E7%A2%B0%E8%A7%81%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/" style="font-size: 10px;">我碰见的一些小问题</a>
     </div>
   </div>
 
@@ -329,11 +288,7 @@
           </li>
         
           <li>
-            <a href="/2020/03/23/hello/">hello</a>
-          </li>
-        
-          <li>
-            <a href="/2020/03/23/hello-world/">Hello World</a>
+            <a href="/2020/03/23/InstructionOfHexo/">Hello World</a>
           </li>
         
       </ul>
