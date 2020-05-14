@@ -156,7 +156,7 @@
 <li>SPOOLing系统的核心思想是利用一台可共享的、高速大容量的块设备（磁盘）来模拟独占设备的操作，使一台独占设备变成多台可并行使用的虚拟设备。</li>
 <li>SPOOLing系统由专门负责I/O的常驻内存的进程和输入井、输出井组成</li>
 </ul>
-<p><img src="/2020/05/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%5CSPOOLing" alt="image-20200513170326835"></p>
+<p><img src="/2020/05/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/SPOOLing" alt="image-20200513170326835"></p>
 <p>​    Sp1和sp2是系统进程，优先级高于用户进程。SP1，SP2模拟脱机输入的时候的外围机，SP1将用户要求数据从输入设备通过缓冲区送到输入井。CPU直接从输入井将数据读入内存。</p>
 <ol start="2">
 <li><p><em>SPOOLing</em>系统的优点</p>
@@ -465,10 +465,10 @@
 <h3 id="3-一些小问题"><a href="#3-一些小问题" class="headerlink" title="3. 一些小问题"></a>3. 一些小问题</h3><p>   在git clone 码云地址的项目时出现<code>Incorrect username or password ( access token )</code>,原因是输入的git账号和密码不是码云的账号密码，更改为码云的账号和密码即可：通过“管理网络密码更改”更改windows保存的gitee账号密码信息即可。</p>
 <h2 id="2-待续"><a href="#2-待续" class="headerlink" title="2. 待续"></a>2. 待续</h2><h1 id="四、-Hexo如何显示本地图片"><a href="#四、-Hexo如何显示本地图片" class="headerlink" title="四、 Hexo如何显示本地图片"></a>四、 Hexo如何显示本地图片</h1><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>本地插入的图片可以本地看见，但是部署到云端会不可见</p>
 <h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><ol>
-<li>**设置站点配置 <code>_config.yml</code>:将<code>post_asset_folder: false</code>改为<code>post_asset_folder: true</code></li>
+<li>设置站点配置 <code>_config.yml</code>:将<code>post_asset_folder: false</code>改为<code>post_asset_folder: true</code></li>
 <li>安装插件：<code>npm install https://github.com/CodeFalling/hexo-asset-image -- save</code></li>
 <li>运行<strong><code>hexo n &quot;XXXXXX&quot;</code></strong>,在生成XXXXX.md博文时就会在<code>/source/_posts</code>目录下生成XXXXXX的文件夹，将你想在XXXXX博文中插入的照片放置到这个同名文件夹中即可，图片的命名随意。</li>
-<li><strong>添加图片</strong>:在想添加的位置写入<code>![](图片名字.图片格式)</code>,例如<code>![](1.png)</code>。</li>
+<li><strong>添加图片</strong>:在想添加的位置写入<code>![](图片名字.图片格式)</code>,例如<code>![](1.png)</code>。<br><a href="https://blog.csdn.net/Fitz1318/article/details/86548129?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase" target="_blank" rel="noopener">参考链接</a></li>
 </ol>
 
       

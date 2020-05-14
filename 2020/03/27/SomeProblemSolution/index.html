@@ -15,7 +15,7 @@
 <meta property="og:description" content="一、 Java环境配置1. JDK的下载 由于我们安装的Eclipse是由Java写的，所以我们在下载Eclipse之前需要下载Java环境，即JDK或者JRE。 在Oracle的官网进行JDK的下载速度会比较慢，有以下几种方法加速   将下载链接去掉https，因为下载时默认使用https，慢 使用下载工具， 百度，迅雷等 国内各大公司的镜像站，如华为,快到起飞 挂代理      2. 配置环境">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-03-27T14:29:30.000Z">
-<meta property="article:modified_time" content="2020-05-14T03:19:27.167Z">
+<meta property="article:modified_time" content="2020-05-14T03:27:53.439Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="我碰见的一些小问题">
 <meta name="twitter:card" content="summary">
@@ -184,10 +184,10 @@
 <h3 id="3-一些小问题"><a href="#3-一些小问题" class="headerlink" title="3. 一些小问题"></a>3. 一些小问题</h3><p>   在git clone 码云地址的项目时出现<code>Incorrect username or password ( access token )</code>,原因是输入的git账号和密码不是码云的账号密码，更改为码云的账号和密码即可：通过“管理网络密码更改”更改windows保存的gitee账号密码信息即可。</p>
 <h2 id="2-待续"><a href="#2-待续" class="headerlink" title="2. 待续"></a>2. 待续</h2><h1 id="四、-Hexo如何显示本地图片"><a href="#四、-Hexo如何显示本地图片" class="headerlink" title="四、 Hexo如何显示本地图片"></a>四、 Hexo如何显示本地图片</h1><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>本地插入的图片可以本地看见，但是部署到云端会不可见</p>
 <h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><ol>
-<li>**设置站点配置 <code>_config.yml</code>:将<code>post_asset_folder: false</code>改为<code>post_asset_folder: true</code></li>
+<li>设置站点配置 <code>_config.yml</code>:将<code>post_asset_folder: false</code>改为<code>post_asset_folder: true</code></li>
 <li>安装插件：<code>npm install https://github.com/CodeFalling/hexo-asset-image -- save</code></li>
 <li>运行<strong><code>hexo n &quot;XXXXXX&quot;</code></strong>,在生成XXXXX.md博文时就会在<code>/source/_posts</code>目录下生成XXXXXX的文件夹，将你想在XXXXX博文中插入的照片放置到这个同名文件夹中即可，图片的命名随意。</li>
-<li><strong>添加图片</strong>:在想添加的位置写入<code>![](图片名字.图片格式)</code>,例如<code>![](1.png)</code>。</li>
+<li><strong>添加图片</strong>:在想添加的位置写入<code>![](图片名字.图片格式)</code>,例如<code>![](1.png)</code>。<br><a href="https://blog.csdn.net/Fitz1318/article/details/86548129?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase" target="_blank" rel="noopener">参考链接</a></li>
 </ol>
 
       
