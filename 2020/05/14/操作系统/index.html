@@ -30,6 +30,8 @@
 <meta property="og:image" content="http://yoursite.com/2020/05/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%A0%B8%E5%BF%83%E7%BA%A7%E7%BA%BF%E7%A8%8B">
 <meta property="og:image" content="http://yoursite.com/2020/05/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%AD%BB%E9%94%81%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5">
 <meta property="og:image" content="http://yoursite.com/2020/05/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1%E5%BC%95%E8%B5%B7%E6%AD%BB%E9%94%81">
+<meta property="og:image" content="http://yoursite.com/2020/05/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E9%93%B6%E8%A1%8C%E5%AE%B61">
+<meta property="og:image" content="http://yoursite.com/2020/05/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E9%93%B6%E8%A1%8C%E5%AE%B62">
 <meta property="og:image" content="http://yoursite.com/2020/05/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E8%B5%84%E6%BA%90%E5%88%86%E9%85%8D%E5%9B%BE1">
 <meta property="og:image" content="http://yoursite.com/2020/05/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%AD%BB%E9%94%81%E5%85%AC%E5%BC%8F1">
 <meta property="og:image" content="http://yoursite.com/2020/05/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%AD%BB%E9%94%81%E5%85%AC%E5%BC%8F2">
@@ -50,7 +52,7 @@
 <meta property="og:image" content="http://yoursite.com/2020/05/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E8%99%9A%E6%8B%9F1">
 <meta property="og:image" content="http://yoursite.com/2020/05/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E9%AB%98%E9%80%9F%E7%BC%93%E5%AD%98">
 <meta property="article:published_time" content="2020-05-14T03:03:20.000Z">
-<meta property="article:modified_time" content="2020-05-17T05:08:42.771Z">
+<meta property="article:modified_time" content="2020-05-17T05:10:42.568Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="计算机">
 <meta name="twitter:card" content="summary">
@@ -776,7 +778,7 @@
 </ol>
 </li>
 <li><p>银行家算法</p>
-<pre><code>在资源分配时进行判断，分析系统状态是否安全</code></pre><ol>
+<pre><code>​    在资源分配时进行判断，分析系统状态是否安全</code></pre><ol>
 <li><p>基本思想</p>
 <pre><code>​    将系统资源比作贷款，申请资源的进程比作借款人，操作系统比作银行家。银行家不可能满足所有借款人所要求借款的总额，所以当某借款人提出借款时，银行家必须判断如果将款借出，会不会导致资金周转不灵。若会，则不借；否则，就借。</code></pre></li>
 <li><p>算法过程</p>
@@ -785,31 +787,39 @@
 <li><p>多项资源的银行家算法：</p>
 <p>​    设置资源的已分配矩阵R、尚需资源矩阵Q以及可分配资源向量available。(即找出一个序列使得系统可收回所有资源)</p>
 <ul>
-<li>如果某一进程对某一种资源提出申请，就假定预先分配给它，然后修改已分配矩阵R、尚需资源矩阵Q和向量available；</li>
-<li><strong>在矩阵Q中找出一行，使该行向量小于等于available</strong>。若不存在这样的向量，就说明没有进程能够获得全部资源运行到完成，将会引起死锁；</li>
-<li>假设被选中的那一行的进程获得资源并运行结束，把它占有的资源全部加入向量available；</li>
-<li>重复(2)(3)步骤，直到下述情况之一出现：或者所有进程都完成，则系统是安全的，可以分配；或者发生死锁，则预先分配是不安全的，应不予分配。</li>
+<li><p>如果某一进程对某一种资源提出申请，就假定预先分配给它，然后修改已分配矩阵R、尚需资源矩阵Q和向量available；</p>
+</li>
+<li><p><strong>在矩阵Q中找出一行，使该行向量小于等于available</strong>。若不存在这样的向量，就说明没有进程能够获得全部资源运行到完成，将会引起死锁；</p>
+</li>
+<li><p>假设被选中的那一行的进程获得资源并运行结束，把它占有的资源全部加入向量available；</p>
+</li>
+<li><p>重复(2)(3)步骤，直到下述情况之一出现：或者所有进程都完成，则系统是安全的，可以分配；或者发生死锁，则预先分配是不安全的，应不予分配。</p>
+<p>​    假设系统中有4类资源：打印机5个、手写板7个、扫描仪8个和读卡器9个，分别表示为R1，R2，R3，R4；共有5个进程a，b，c，d，e，某时刻系统状态如下所示：</p>
+</li>
 </ul>
+<p><img src="/2020/05/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E9%93%B6%E8%A1%8C%E5%AE%B61" alt="银行家1"></p>
+<p><img src="/2020/05/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E9%93%B6%E8%A1%8C%E5%AE%B62" alt="银行家2"></p>
 </li>
-</ol>
-</li>
-</ol>
-<pre><code>​    假设系统中有4类资源：打印机5个、手写板7个、扫描仪8个和读卡器9个，分别表示为R1，R2，R3，R4；共有5个进程a，b，c，d，e，某时刻系统状态如下所示：
-
-![银行家1](银行家1)
-
-![银行家2](银行家2)</code></pre><ol start="4">
 <li><p>死锁的检测——让死锁发生</p>
 <ol>
 <li><p>资源分配图</p>
 <pre><code>​    描述进程申请资源和资源分配情况的关系模型图，可以直观的检测系统是否会发生死锁。在资源分配图中，规定如下：</code></pre><ul>
 <li>圆表示一个进程；</li>
-<li>方块表示一个资源类，其中的圆点表示该类资源中的单个资源；</li>
-<li>从资源指向进程的箭头表示资源被分配给该进程；</li>
-<li>从进程指向资源的箭头表示进程申请一个这类资源。</li>
 </ul>
+</li>
+</ol>
+<ul>
+<li><p>方块表示一个资源类，其中的圆点表示该类资源中的单个资源；</p>
+<ul>
+<li><p>从资源指向进程的箭头表示资源被分配给该进程；</p>
+</li>
+<li><p>从进程指向资源的箭头表示进程申请一个这类资源。</p>
 <p><img src="/2020/05/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E8%B5%84%E6%BA%90%E5%88%86%E9%85%8D%E5%9B%BE1" alt="资源分配图1"></p>
 </li>
+</ul>
+</li>
+</ul>
+<ol start="2">
 <li><p>合理的资源分配图</p>
 <p>​    设资源类Rj有资源Wj个，用|(Rj,Pi)|表示Rj分配给进程Pi的资源个数，用|(Pi,Rj)|表示进程Pi申请Rj的资源个数，则应满足两个条件：</p>
 <ol>
@@ -857,6 +867,8 @@
 <li>撤销进程：逐个撤销或一次性撤销所有进程</li>
 <li>剥夺资源：剥夺死锁进程的资源</li>
 <li>进程回退：需要保留历史信息，比较成熟，广泛应用于DBMS中</li>
+</ol>
+</li>
 </ol>
 </li>
 </ol>
@@ -1417,7 +1429,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/05/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" data-id="ckaalnhhv000420l5a2kqemse" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/05/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" data-id="ckaalq0ka0004v0l55wjtchks" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" rel="tag">计算机</a></li></ul>
