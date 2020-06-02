@@ -64,6 +64,82 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-LeetCode每日一题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/25/LeetCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" class="article-date">
+  <time datetime="2020-05-25T11:56:04.000Z" itemprop="datePublished">2020-05-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/25/LeetCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/">LeetCode每日一题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="LettCode每日一题-Java"><a href="#LettCode每日一题-Java" class="headerlink" title="LettCode每日一题/Java"></a>LettCode每日一题/Java</h1><blockquote>
+<p>题目链接，代码，讲解思路，附带Java知识点</p>
+</blockquote>
+<h3 id="2020-05-25"><a href="#2020-05-25" class="headerlink" title="2020/05/25"></a>2020/05/25</h3><ol>
+<li><p>2020/05/25<a href="https://leetcode-cn.com/problems/lru-cache/" target="_blank" rel="noopener">题目描述</a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LRUCache</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> capacity;</span><br><span class="line">	<span class="keyword">private</span> Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> LinkedHashMap&lt;Integer, Integer&gt;();</span><br><span class="line">	</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">LRUCache</span><span class="params">(<span class="keyword">int</span> capacity)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.capacity = capacity;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">get</span><span class="params">(<span class="keyword">int</span> key)</span> </span>&#123;</span><br><span class="line">        Integer tmp  = -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (map.containsKey(key)) &#123;</span><br><span class="line">			tmp = map.get(key);</span><br><span class="line">			map.remove(key);</span><br><span class="line">			map.put(key, tmp);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> tmp;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">put</span><span class="params">(<span class="keyword">int</span> key, <span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(map.containsKey(key)) &#123;</span><br><span class="line">			map.remove(key);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> ( capacity == <span class="number">0</span> ) &#123;</span><br><span class="line">			Iterator&lt;Map.Entry&lt;Integer, Integer&gt;&gt; iterator = map.entrySet().iterator();</span><br><span class="line">			iterator.next();</span><br><span class="line">			iterator.remove();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			capacity--;</span><br><span class="line">		&#125;</span><br><span class="line">		map.put(key, value);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="2">
+<li>思路讲解</li>
+</ol>
+<p><a href="https://blog.csdn.net/justloveyou_/article/details/71713781" target="_blank" rel="noopener">链接</a></p>
+<h3 id="20200-06-02"><a href="#20200-06-02" class="headerlink" title="20200/06/02"></a>20200/06/02</h3><ol>
+<li><p>2020/03/02题目：<a href="https://leetcode-cn.com/problems/reverse-linked-list/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/reverse-linked-list/</a></p>
+<ol>
+<li><p>代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseList</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        ListNode resetHead = <span class="keyword">null</span>;</span><br><span class="line">		ListNode currentNode = head;</span><br><span class="line">        ListNode tempNode = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">while</span>( currentNode!= <span class="keyword">null</span> ) &#123;</span><br><span class="line">			tempNode = currentNode.next;</span><br><span class="line">			currentNode.next = resetHead; <span class="comment">//指向反向</span></span><br><span class="line">			resetHead = currentNode;  <span class="comment">//“头部”移动</span></span><br><span class="line">			currentNode = tempNode;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> resetHead;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>思路</p>
+<p>​     要求将 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL实现反转5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL，想法是可以通过简单的将链表指向反转，即使用两个指针，一个指向当前所在节点A,另一个指向前一个节点B，原本A-&gt;B，可以变成B-&gt;A，接着移动节点。</p>
+</li>
+<li><p>实践复杂度O(1),空间复杂度O(n)</p>
+</li>
+</ol>
+</li>
+<li><p>2020/06/02题目：<a href="https://leetcode-cn.com/problems/qiu-12n-lcof/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/qiu-12n-lcof/</a></p>
+<ol>
+<li><p>代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">sumNums</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sum = n;</span><br><span class="line">		<span class="keyword">boolean</span> flag = n &gt; <span class="number">0</span> &amp;&amp; (sum += sumNums(n-<span class="number">1</span>)) &gt; <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>思路：不可使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句实现数加，则通过&amp;&amp;操作来完成判断操作(不一定成立)和求和操作(添加必成立条件)</p>
+</li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/05/25/LeetCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" data-id="ckaxwb6zf0000zwl58ofm668j" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-操作系统" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/05/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="article-date">
@@ -1600,7 +1676,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%88%91%E7%A2%B0%E8%A7%81%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/" rel="tag">我碰见的一些小问题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" rel="tag">计算机</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%88%91%E7%A2%B0%E8%A7%81%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/" rel="tag">我碰见的一些小问题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" rel="tag">计算机</a></li></ul>
     </div>
   </div>
 
@@ -1610,7 +1686,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/%E6%88%91%E7%A2%B0%E8%A7%81%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/" style="font-size: 10px;">我碰见的一些小问题</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" style="font-size: 10px;">计算机</a>
+      <a href="/tags/%E6%88%91%E7%A2%B0%E8%A7%81%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/" style="font-size: 10px;">我碰见的一些小问题</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" style="font-size: 10px;">计算机</a>
     </div>
   </div>
 
@@ -1630,6 +1706,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/05/25/LeetCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/">LeetCode每日一题</a>
+          </li>
         
           <li>
             <a href="/2020/05/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>
