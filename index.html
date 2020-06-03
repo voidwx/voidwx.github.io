@@ -110,7 +110,7 @@
 <li><p>思路</p>
 <p>​     要求将 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL实现反转5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL，想法是可以通过简单的将链表指向反转，即使用两个指针，一个指向当前所在节点A,另一个指向前一个节点B，原本A-&gt;B，可以变成B-&gt;A，接着移动节点。</p>
 </li>
-<li><p>实践复杂度O(1),空间复杂度O(n)</p>
+<li><p>时间复杂度O(1),空间复杂度O(n)</p>
 </li>
 </ol>
 </li>
@@ -119,7 +119,31 @@
 <li><p>代码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">sumNums</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sum = n;</span><br><span class="line">		<span class="keyword">boolean</span> flag = n &gt; <span class="number">0</span> &amp;&amp; (sum += sumNums(n-<span class="number">1</span>)) &gt; <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>思路：不可使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句实现数加，则通过&amp;&amp;操作来完成判断操作(不一定成立)和求和操作(添加必成立条件)</p>
+<li><p>思路：不可使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句实现数加，则通过&amp;&amp;操作来完成判断操作(不一定成立)和求和操作(添加必成立条件)。</p>
+<p>Java在使用逻辑操作符的时候，存在一种短路现象，即一旦可以确定整个表达式的值，就不会再接着计算剩余的部分，如testA()&amp;&amp;testB(),当testA()返回值为true时，会接着计算testB()的值；当testA()返回false时，整个算式的值已经确定，testB()不执行，应用这样的机制来实现题目中隐含的条件判断。所以&amp;&amp;称为短路与，||称为长路与</p>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="2020-06-03"><a href="#2020-06-03" class="headerlink" title="2020/06/03"></a>2020/06/03</h3><ol>
+<li><p>题目：<a href="https://leetcode-cn.com/problems/new-21-game/动态规划题" target="_blank" rel="noopener">https://leetcode-cn.com/problems/new-21-game/动态规划题</a></p>
+<ol>
+<li><p>代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">new21Game</span><span class="params">(<span class="keyword">int</span> N, <span class="keyword">int</span> K, <span class="keyword">int</span> W)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">double</span>[] dp = <span class="keyword">new</span> <span class="keyword">double</span>[K+W];</span><br><span class="line">		<span class="keyword">double</span> sum = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">if</span> (K + W &lt;= N) <span class="keyword">return</span> <span class="number">1.0</span>;</span><br><span class="line">		<span class="keyword">for</span> ( <span class="keyword">int</span> i = K ; i &lt;= N ; i++ ) &#123;</span><br><span class="line">			dp[i] = <span class="number">1</span> ;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = K ; i&lt; K + W ; i++) &#123;</span><br><span class="line">			sum += dp[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> ( <span class="keyword">int</span> i = K-<span class="number">1</span> ; i &gt;= <span class="number">0</span> ; i--) &#123;</span><br><span class="line">			dp[i] = sum / W;</span><br><span class="line">			sum = sum - dp[i+W] + dp[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> dp[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>思路</p>
+<ol>
+<li>定义数组元素的含义，假设一维数组dp[i]为Alice开始持有的数字i并获胜的概率</li>
+<li>数组元素间的关系和初始值<ol>
+<li>当 i&gt;N时，dp[i]=0;</li>
+<li>当K&lt;=i&lt;=N时，dp[i]=1;</li>
+<li>当0&lt;=i&lt;K时，dp[i]=(dp[i]+dp[i+1]+…+dp[i+W])/W;</li>
+</ol>
+</li>
+<li>然后一步步倒退，可以计算出当dp[0]，即Alice开始持有的数字为0获胜的概率，即题解</li>
+</ol>
+</li>
+<li><p>时间复杂度空间复杂度O(N+M),但还可以再降</p>
 </li>
 </ol>
 </li>
