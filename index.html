@@ -102,72 +102,98 @@
 <td align="left"><strong>抓包工具：Fiddler</strong></td>
 </tr>
 </tbody></table>
-<h2 id="疫情通脚本"><a href="#疫情通脚本" class="headerlink" title="疫情通脚本"></a>疫情通脚本</h2><h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>抓取疫情通在提交时候的数据包，获取相关字节参数，伪造数据包，并将其发送至服务器中。</p>
-<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><h4 id="1-登录信息和数据包"><a href="#1-登录信息和数据包" class="headerlink" title="1. 登录信息和数据包"></a>1. 登录信息和数据包</h4><p>使用Fiddler首先对登录信息进行抓取</p>
-<p>得到usrname 和password信息</p>
-<p>之后对提交数据包进行抓取，得到每次提交的数据包具体内容</p>
-<h4 id="2-构造数据包-amp-amp-发送数据包"><a href="#2-构造数据包-amp-amp-发送数据包" class="headerlink" title="2. 构造数据包&amp;&amp;发送数据包"></a>2. 构造数据包&amp;&amp;发送数据包</h4><ol>
+<h2 id="一、疫情通脚本"><a href="#一、疫情通脚本" class="headerlink" title="一、疫情通脚本"></a>一、疫情通脚本</h2><h3 id="1-1-原理"><a href="#1-1-原理" class="headerlink" title="1.1 原理"></a>1.1 原理</h3><p>使用Fiddler抓取疫情通在提交时候的数据包，获取相关字节参数，伪造数据包，并将其发送至服务器中。</p>
+<h3 id="1-2-步骤"><a href="#1-2-步骤" class="headerlink" title="1.2 步骤"></a>1.2 步骤</h3><ol>
+<li><p><strong>登录信息和数据包</strong></p>
+<ol>
+<li><p>使用Fiddler首先对登录信息进行抓取</p>
+</li>
+<li><p>得到usrname 和password信息</p>
+</li>
+<li><p>对提交数据包进行抓取，得到每次提交的数据包具体内容</p>
+</li>
+</ol>
+</li>
+<li><p><strong>构造数据包&amp;&amp;发送数据包</strong></p>
+<ol>
 <li>使用requests.session()来实现登录之后的会话保持</li>
 <li>使用post将我们构造的数据报进行发送</li>
 </ol>
-<h4 id="3-执行结果接收"><a href="#3-执行结果接收" class="headerlink" title="3. 执行结果接收"></a>3. 执行结果接收</h4><p>进入<a href="https://sc.ftqq.com/" target="_blank" rel="noopener">https://sc.ftqq.com/</a> 注册登录账号，该工具可实现使用post/get方法向微信客户端发送信息</p>
-<p>将上述步骤2中得到的结果发送的<a href="https://sc.ftqq.com/" target="_blank" rel="noopener">https://sc.ftqq.com/</a> 的账户地址中，实现向微信端的通知。</p>
-<h2 id="Centos7安装python3"><a href="#Centos7安装python3" class="headerlink" title="Centos7安装python3"></a>Centos7安装python3</h2><h4 id="1-python3的安装"><a href="#1-python3的安装" class="headerlink" title="1. python3的安装"></a>1. python3的安装</h4><h5 id="yum更新"><a href="#yum更新" class="headerlink" title="yum更新"></a>yum更新</h5><p>   <code>yum update -y</code>    </p>
-<h5 id="安装编译python3的依赖"><a href="#安装编译python3的依赖" class="headerlink" title="安装编译python3的依赖"></a>安装编译python3的依赖</h5>   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">yum -y install \</span><br><span class="line">zlib-devel \</span><br><span class="line">bzip2-devel \</span><br><span class="line">openssl-devel \</span><br><span class="line">ncurses-devel \</span><br><span class="line">sqlite-devel \</span><br><span class="line">readline-devel \</span><br><span class="line">tk-devel \</span><br><span class="line">libffi-devel \</span><br><span class="line">wget \</span><br><span class="line">gcc \</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make libffi-devel</span><br></pre></td></tr></table></figure>
-
-<h5 id="编译安装python"><a href="#编译安装python" class="headerlink" title="编译安装python"></a>编译安装python</h5><ol>
-<li><p>下载python3.6.4源码</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tgz</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>解压</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf Python-3.6.3.tgz</span><br></pre></td></tr></table></figure>
+<li><p><strong>执行结果接收</strong></p>
+<ol>
+<li><p>进入<a href="https://sc.ftqq.com/" target="_blank" rel="noopener">https://sc.ftqq.com/</a> 注册登录账号，该工具可实现使用post/get方法向微信客户端发送信息</p>
 </li>
-<li><p>进入解压后的目录，执行编译前的<code>configure</code>操作</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> Python-3.6.3 &amp;&amp; ./configure prefix=/usr/<span class="built_in">local</span>/python3</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>编译源码，在Python-3.6.3目录执行以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-
-<p>编译成功后提示以下信息,setuptools和pip都已经部署成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Collecting setuptools</span><br><span class="line">Collecting pip</span><br><span class="line">Installing collected packages: setuptools, pip</span><br><span class="line">Successfully installed pip-9.0.1 setuptools-28.8.0</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建python3的软连接</p>
-<p><code>ln -s /usr/local/python3/bin/python3.6 /usr/bin/python3</code></p>
-</li>
-<li><p>创建pip3的软链接</p>
-<p><code>ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3</code></p>
-</li>
-<li><p>pip3升级</p>
-<p><code>pip3 install --upgrade pip</code></p>
+<li><p>将上述步骤2中得到的结果发送的<a href="https://sc.ftqq.com/" target="_blank" rel="noopener">https://sc.ftqq.com/</a> 的账户地址中，实现向微信端的通知。</p>
 </li>
 </ol>
+</li>
+</ol>
+<h2 id="二、Centos7安装python3"><a href="#二、Centos7安装python3" class="headerlink" title="二、Centos7安装python3"></a>二、Centos7安装python3</h2><h3 id="2-1-依赖安装"><a href="#2-1-依赖安装" class="headerlink" title="2.1 依赖安装"></a>2.1 依赖安装</h3><ol>
+<li><p><strong>yum更新</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum update -y</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>安装编译python3的依赖</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">yum -y install \</span><br><span class="line">zlib-devel \</span><br><span class="line">bzip2-devel \</span><br><span class="line">openssl-devel \</span><br><span class="line">openssl\</span><br><span class="line">ncurses-devel \</span><br><span class="line">sqlite-devel \</span><br><span class="line">readline-devel \</span><br><span class="line">tk-devel \</span><br><span class="line">libffi-devel \</span><br><span class="line">wget \</span><br><span class="line">gcc \</span><br><span class="line">   make</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="2-2-编译安装python"><a href="#2-2-编译安装python" class="headerlink" title="2.2 编译安装python"></a>2.2 编译安装python</h3><ol>
+<li><p><strong>下载<code>python3.6.4</code>源码</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tgz</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>解压</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf Python-3.6.3.tgz</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>进入解压后的目录，执行编译前的<code>configure</code>操作</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> Python-3.6.3 &amp;&amp; ./configure prefix=/usr/<span class="built_in">local</span>/python3</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>编译源码，在Python-3.6.3目录执行以下命令：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+
+<p>编译成功后提示以下信息,<code>setuptools</code>和<code>pip</code>都已经部署成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Collecting setuptools</span><br><span class="line">Collecting pip</span><br><span class="line">Installing collected packages: setuptools, pip</span><br><span class="line">Successfully installed pip-9.0.1 setuptools-28.8.0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>创建<code>python3</code>的软连接</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/<span class="built_in">local</span>/python3/bin/python3.6 /usr/bin/python3</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>创建<code>pip3</code>的软链接</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/<span class="built_in">local</span>/python3/bin/pip3 /usr/bin/pip3</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong><code>pip3</code>升级</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install --upgrade pip</span><br></pre></td></tr></table></figure>
+
 <p>至此，安装完成，简单验证。</p>
-<h5 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h5><ul>
-<li>python3.6：python3 -V</li>
-<li>pip3：pip3 -V</li>
+</li>
+<li><p><strong>验证</strong></p>
+<ul>
+<li><code>python3.6</code>：<code>python3 -V</code></li>
+<li><code>pip3</code>：<code>pip3 -V</code></li>
 </ul>
-<h4 id="2-crontab定时执行python脚本"><a href="#2-crontab定时执行python脚本" class="headerlink" title="2. crontab定时执行python脚本"></a>2. crontab定时执行python脚本</h4><p><strong>思路</strong></p>
-<p>大体思路为先写一个 <code>shell</code> 脚本，脚本中执行 <code>python</code> 文件，然后定时执行 <code>shell</code> 脚本即可（直接执行python脚本可能会出错，原因未知）</p>
-<p>1.创建脚本：</p>
+</li>
+</ol>
+<h2 id="三、crontab定时执行python脚本"><a href="#三、crontab定时执行python脚本" class="headerlink" title="三、crontab定时执行python脚本"></a>三、<code>crontab</code>定时执行python脚本</h2><h3 id="3-1-思路"><a href="#3-1-思路" class="headerlink" title="3.1 思路"></a>3.1 思路</h3><p>大体思路为先写一个 <code>shell</code> 脚本，脚本中执行 <code>python</code> 文件，然后定时执行 <code>shell</code> 脚本即可（直接执行python脚本可能会出错，原因未知）</p>
+<h3 id="3-2-步骤"><a href="#3-2-步骤" class="headerlink" title="3.2 步骤"></a>3.2 步骤</h3><ol>
+<li><p>创建脚本：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir script &amp;&amp; vim yi_qing_tong_start.sh</span><br></pre></td></tr></table></figure>
-
-<p>2.在yi_qing_tong_start.sh脚本中结合自身情况输入内容：</p>
+</li>
+<li><p>在<code>yi_qing_tong_start.sh</code>脚本中结合自身情况输入内容：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/bash</span></span><br><span class="line"><span class="built_in">cd</span> /root/script</span><br><span class="line">/usr/bin/python3 xw_yi_qing_tong.py</span><br></pre></td></tr></table></figure>
-
-<p>3.使用如下命令，编辑定时任务：</p>
+</li>
+<li><p>使用如下命令，编辑定时任务：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure>
-
-<p>4.设定每天8点执行脚本，设置如下：</p>
+</li>
+<li><p>设定每天8点执行脚本，设置如下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 8 * * * /root/script/yi_qing_tong_start.sh</span><br></pre></td></tr></table></figure>
-
-<p>5.保存定时任务，几分钟之后自动生效。</p>
+</li>
+<li><p>保存定时任务，几分钟之后自动生效。</p>
 <blockquote>
 <p>注意：所以的路径都使用据对路径，否则无效</p>
 </blockquote>
+</li>
+</ol>
 <p><a href="https://cloud.tencent.com/developer/article/1532149" target="_blank" rel="noopener">crontab定时执行python脚本不成功解决方案</a></p>
-<p>创建软链接即用 ln -s 原始文件或文件夹 目标文件或文件夹</p>
+<h2 id="四、拓展"><a href="#四、拓展" class="headerlink" title="四、拓展"></a>四、拓展</h2><h3 id="4-1-软链接"><a href="#4-1-软链接" class="headerlink" title="4.1 软链接"></a>4.1 软链接</h3><p>创建软链接即用 ln -s 原始文件或文件夹 目标文件或文件夹</p>
 <p>说明:因为空间有限,不改变原来程序文件，再继续读取/data/ftp目录内容，只需要在/data2/上面建立软连接. </p>
 <p><strong>例：</strong></p>
 <p>#建立软链接</p>
