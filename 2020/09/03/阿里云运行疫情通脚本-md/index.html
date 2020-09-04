@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>阿里云运行疫情通脚本.md | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="阿里云部署疫情通脚本   系统环境：阿里云Centos7.3    软件环境：Python3.6.4   Python包：requests   抓包工具：Fiddler   疫情通脚本原理抓取疫情通在提交时候的数据包，获取相关字节参数，伪造数据包，并将其发送至服务器中。 步骤1. 登录信息和数据包使用Fiddler首先对登录信息进行抓取 得到usrname 和password信息 之后对提交数据包">
+<meta property="og:type" content="article">
+<meta property="og:title" content="阿里云运行疫情通脚本.md">
+<meta property="og:url" content="http://yoursite.com/2020/09/03/%E9%98%BF%E9%87%8C%E4%BA%91%E8%BF%90%E8%A1%8C%E7%96%AB%E6%83%85%E9%80%9A%E8%84%9A%E6%9C%AC-md/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="阿里云部署疫情通脚本   系统环境：阿里云Centos7.3    软件环境：Python3.6.4   Python包：requests   抓包工具：Fiddler   疫情通脚本原理抓取疫情通在提交时候的数据包，获取相关字节参数，伪造数据包，并将其发送至服务器中。 步骤1. 登录信息和数据包使用Fiddler首先对登录信息进行抓取 得到usrname 和password信息 之后对提交数据包">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-09-03T08:53:39.000Z">
+<meta property="article:modified_time" content="2020-09-03T13:46:49.311Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="python 阿里云Centos7">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-阿里云运行疫情通脚本-md" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/03/%E9%98%BF%E9%87%8C%E4%BA%91%E8%BF%90%E8%A1%8C%E7%96%AB%E6%83%85%E9%80%9A%E8%84%9A%E6%9C%AC-md/" class="article-date">
+  <time datetime="2020-09-03T08:53:39.000Z" itemprop="datePublished">2020-09-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      阿里云运行疫情通脚本.md
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="阿里云部署疫情通脚本"><a href="#阿里云部署疫情通脚本" class="headerlink" title="阿里云部署疫情通脚本"></a>阿里云部署疫情通脚本</h1><table>
+<thead>
+<tr>
+<th>系统环境：阿里云Centos7.3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>软件环境：Python3.6.4</td>
+</tr>
+<tr>
+<td>Python包：requests</td>
+</tr>
+<tr>
+<td>抓包工具：Fiddler</td>
+</tr>
+</tbody></table>
+<h2 id="疫情通脚本"><a href="#疫情通脚本" class="headerlink" title="疫情通脚本"></a>疫情通脚本</h2><h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>抓取疫情通在提交时候的数据包，获取相关字节参数，伪造数据包，并将其发送至服务器中。</p>
+<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><h4 id="1-登录信息和数据包"><a href="#1-登录信息和数据包" class="headerlink" title="1. 登录信息和数据包"></a>1. 登录信息和数据包</h4><p>使用Fiddler首先对登录信息进行抓取</p>
+<p>得到usrname 和password信息</p>
+<p>之后对提交数据包进行抓取，得到每次提交的数据包具体内容</p>
+<h4 id="2-构造数据包-amp-amp-发送数据包"><a href="#2-构造数据包-amp-amp-发送数据包" class="headerlink" title="2. 构造数据包&amp;&amp;发送数据包"></a>2. 构造数据包&amp;&amp;发送数据包</h4><ol>
+<li>使用requests.session()来实现登录之后的会话保持</li>
+<li>使用post将我们构造的数据报进行发送</li>
+</ol>
+<h4 id="3-执行结果接收"><a href="#3-执行结果接收" class="headerlink" title="3. 执行结果接收"></a>3. 执行结果接收</h4><p>进入<a href="https://sc.ftqq.com/注册登录账号，该工具可实现使用post/get方法向微信客户端发送信息" target="_blank" rel="noopener">https://sc.ftqq.com/注册登录账号，该工具可实现使用post/get方法向微信客户端发送信息</a></p>
+<p>将上述步骤2中得到的结果发送的<a href="https://sc.ftqq.com/的账户地址中，实现向微信端的通知。" target="_blank" rel="noopener">https://sc.ftqq.com/的账户地址中，实现向微信端的通知。</a></p>
+<h2 id="Centos7安装python3"><a href="#Centos7安装python3" class="headerlink" title="Centos7安装python3"></a>Centos7安装python3</h2><h4 id="1-python3的安装"><a href="#1-python3的安装" class="headerlink" title="1. python3的安装"></a>1. python3的安装</h4><h5 id="yum更新"><a href="#yum更新" class="headerlink" title="yum更新"></a>yum更新</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum update -y</span><br></pre></td></tr></table></figure>
+
+<h5 id="安装编译python3的依赖"><a href="#安装编译python3的依赖" class="headerlink" title="安装编译python3的依赖"></a>安装编译python3的依赖</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">yum -y install \</span><br><span class="line">zlib-devel \</span><br><span class="line">bzip2-devel \</span><br><span class="line">openssl-devel \</span><br><span class="line">ncurses-devel \</span><br><span class="line">sqlite-devel \</span><br><span class="line">readline-devel \</span><br><span class="line">tk-devel \</span><br><span class="line">libffi-devel \</span><br><span class="line">wget \</span><br><span class="line">gcc \</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make libffi-devel</span><br></pre></td></tr></table></figure>
+
+<h5 id="编译安装python"><a href="#编译安装python" class="headerlink" title="编译安装python"></a>编译安装python</h5><ol>
+<li><p>下载python3.6.4源码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tgz</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>解压</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf Python-3.6.3.tgz</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>进入解压后的目录，执行编译前的<code>configure</code>操作</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> Python-3.6.3 &amp;&amp; ./configure prefix=/usr/<span class="built_in">local</span>/python3</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编译源码，在Python-3.6.3目录执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+
+<p>编译成功后提示以下信息,setuptools和pip都已经部署成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Collecting setuptools</span><br><span class="line">Collecting pip</span><br><span class="line">Installing collected packages: setuptools, pip</span><br><span class="line">Successfully installed pip-9.0.1 setuptools-28.8.0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建python3的软连接</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/<span class="built_in">local</span>/python3/bin/python3.6 /usr/bin/python3</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建pip3的软链接</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/<span class="built_in">local</span>/python3/bin/pip3 /usr/bin/pip3</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>pip3升级</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install --upgrade pip</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>至此，安装完成，简单验证。</p>
+<h5 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h5><ul>
+<li>python3.6：python3 -V</li>
+<li>pip3：pip3 -V</li>
+</ul>
+<h4 id="2-crontab定时执行python脚本"><a href="#2-crontab定时执行python脚本" class="headerlink" title="2. crontab定时执行python脚本"></a>2. crontab定时执行python脚本</h4><p><strong>思路</strong></p>
+<p>大体思路为先写一个 <code>shell</code> 脚本，脚本中执行 <code>python</code> 文件，然后定时执行 <code>shell</code> 脚本即可（直接执行python脚本可能会出错，原因未知）</p>
+<p>1.创建脚本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir script &amp;&amp; vim yi_qing_tong_start.sh</span><br></pre></td></tr></table></figure>
+
+<p>2.在yi_qing_tong_start.sh脚本中结合自身情况输入内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/bash</span></span><br><span class="line"><span class="built_in">cd</span> /root/script</span><br><span class="line">/usr/bin/python3 xw_yi_qing_tong.py</span><br></pre></td></tr></table></figure>
+
+<p>3.使用如下命令，编辑定时任务：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure>
+
+<p>4.设定每天8点执行脚本，设置如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 8 * * * /root/script/yi_qing_tong_start.sh</span><br></pre></td></tr></table></figure>
+
+<p>5.保存定时任务，几分钟之后自动生效。</p>
+<blockquote>
+<p>注意：所以的路径都使用据对路径，否则无效</p>
+</blockquote>
+<p><a href="https://cloud.tencent.com/developer/article/1532149" target="_blank" rel="noopener">crontab定时执行python脚本不成功解决方案</a></p>
+<p>创建软链接即用 ln -s 原始文件或文件夹 目标文件或文件夹</p>
+<p>说明:因为空间有限,不改变原来程序文件，再继续读取/data/ftp目录内容，只需要在/data2/上面建立软连接. </p>
+<p><strong>例：</strong></p>
+<p>#建立软链接</p>
+<p>mv /data/ftp /data2/</p>
+<p>ln -s /data2/ftp  /data/ftp</p>
+<p>#删除软连接</p>
+<p>#当删除链接文件时,如果不小心会把原始文件删掉</p>
+<p>rm  /data/ftp </p>
+<p>#只是少了一个“ / ” 删除的 就是链接文件, 也就是在文件的最后不要加上”/“</p>
+<p><strong>结论：</strong></p>
+<p>在删除文件时要小心</p>
+<p>在删除软链接文件时,小心使用 Tab 建,一定不要在目录后面加斜扛”/“</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/09/03/%E9%98%BF%E9%87%8C%E4%BA%91%E8%BF%90%E8%A1%8C%E7%96%AB%E6%83%85%E9%80%9A%E8%84%9A%E6%9C%AC-md/" data-id="ckenm3xyc000a94l57tv3c9p0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-%E9%98%BF%E9%87%8C%E4%BA%91Centos7/" rel="tag">python 阿里云Centos7</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/08/24/Java-Spring%E6%B3%A8%E8%A7%A3-md/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Java&amp;Spring注解.md</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Springboot/" rel="tag">Springboot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-%E9%98%BF%E9%87%8C%E4%BA%91Centos7/" rel="tag">python 阿里云Centos7</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/" rel="tag">开发框架</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%88%91%E7%A2%B0%E8%A7%81%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/" rel="tag">我碰见的一些小问题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95-%E6%A0%88/" rel="tag">算法,栈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" rel="tag">计算机</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Springboot/" style="font-size: 10px;">Springboot</a> <a href="/tags/python-%E9%98%BF%E9%87%8C%E4%BA%91Centos7/" style="font-size: 10px;">python 阿里云Centos7</a> <a href="/tags/%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/" style="font-size: 10px;">开发框架</a> <a href="/tags/%E6%88%91%E7%A2%B0%E8%A7%81%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/" style="font-size: 10px;">我碰见的一些小问题</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a> <a href="/tags/%E7%AE%97%E6%B3%95-%E6%A0%88/" style="font-size: 10px;">算法,栈</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" style="font-size: 10px;">计算机</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/09/03/%E9%98%BF%E9%87%8C%E4%BA%91%E8%BF%90%E8%A1%8C%E7%96%AB%E6%83%85%E9%80%9A%E8%84%9A%E6%9C%AC-md/">阿里云运行疫情通脚本.md</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/24/Java-Spring%E6%B3%A8%E8%A7%A3-md/">Java&amp;Spring注解.md</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/17/SpringAndSpringboot-md/">SpringAndSpringboot.md</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/24/RabbitMQ/">RabbitMQ</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/24/%E5%AE%89%E5%85%A8%E5%8F%AF%E6%BA%AF%E6%BA%90IM%E7%B3%BB%E7%BB%9F/">安全可溯源IM系统</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
