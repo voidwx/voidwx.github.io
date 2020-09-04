@@ -89,17 +89,17 @@
         <h1 id="阿里云部署疫情通脚本"><a href="#阿里云部署疫情通脚本" class="headerlink" title="阿里云部署疫情通脚本"></a>阿里云部署疫情通脚本</h1><table>
 <thead>
 <tr>
-<th>系统环境：阿里云Centos7.3</th>
+<th align="left"><strong>系统环境：阿里云Centos7.3</strong></th>
 </tr>
 </thead>
 <tbody><tr>
-<td>软件环境：Python3.6.4</td>
+<td align="left"><strong>软件环境：Python3.6.4</strong></td>
 </tr>
 <tr>
-<td>Python包：requests</td>
+<td align="left"><strong>Python包：requests</strong></td>
 </tr>
 <tr>
-<td>抓包工具：Fiddler</td>
+<td align="left"><strong>抓包工具：Fiddler</strong></td>
 </tr>
 </tbody></table>
 <h2 id="疫情通脚本"><a href="#疫情通脚本" class="headerlink" title="疫情通脚本"></a>疫情通脚本</h2><h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>抓取疫情通在提交时候的数据包，获取相关字节参数，伪造数据包，并将其发送至服务器中。</p>
@@ -110,11 +110,10 @@
 <li>使用requests.session()来实现登录之后的会话保持</li>
 <li>使用post将我们构造的数据报进行发送</li>
 </ol>
-<h4 id="3-执行结果接收"><a href="#3-执行结果接收" class="headerlink" title="3. 执行结果接收"></a>3. 执行结果接收</h4><p>进入<a href="https://sc.ftqq.com/注册登录账号，该工具可实现使用post/get方法向微信客户端发送信息" target="_blank" rel="noopener">https://sc.ftqq.com/注册登录账号，该工具可实现使用post/get方法向微信客户端发送信息</a></p>
-<p>将上述步骤2中得到的结果发送的<a href="https://sc.ftqq.com/的账户地址中，实现向微信端的通知。" target="_blank" rel="noopener">https://sc.ftqq.com/的账户地址中，实现向微信端的通知。</a></p>
-<h2 id="Centos7安装python3"><a href="#Centos7安装python3" class="headerlink" title="Centos7安装python3"></a>Centos7安装python3</h2><h4 id="1-python3的安装"><a href="#1-python3的安装" class="headerlink" title="1. python3的安装"></a>1. python3的安装</h4><h5 id="yum更新"><a href="#yum更新" class="headerlink" title="yum更新"></a>yum更新</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum update -y</span><br></pre></td></tr></table></figure>
-
-<h5 id="安装编译python3的依赖"><a href="#安装编译python3的依赖" class="headerlink" title="安装编译python3的依赖"></a>安装编译python3的依赖</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">yum -y install \</span><br><span class="line">zlib-devel \</span><br><span class="line">bzip2-devel \</span><br><span class="line">openssl-devel \</span><br><span class="line">ncurses-devel \</span><br><span class="line">sqlite-devel \</span><br><span class="line">readline-devel \</span><br><span class="line">tk-devel \</span><br><span class="line">libffi-devel \</span><br><span class="line">wget \</span><br><span class="line">gcc \</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
+<h4 id="3-执行结果接收"><a href="#3-执行结果接收" class="headerlink" title="3. 执行结果接收"></a>3. 执行结果接收</h4><p>进入<a href="https://sc.ftqq.com/" target="_blank" rel="noopener">https://sc.ftqq.com/</a> 注册登录账号，该工具可实现使用post/get方法向微信客户端发送信息</p>
+<p>将上述步骤2中得到的结果发送的<a href="https://sc.ftqq.com/" target="_blank" rel="noopener">https://sc.ftqq.com/</a> 的账户地址中，实现向微信端的通知。</p>
+<h2 id="Centos7安装python3"><a href="#Centos7安装python3" class="headerlink" title="Centos7安装python3"></a>Centos7安装python3</h2><h4 id="1-python3的安装"><a href="#1-python3的安装" class="headerlink" title="1. python3的安装"></a>1. python3的安装</h4><h5 id="yum更新"><a href="#yum更新" class="headerlink" title="yum更新"></a>yum更新</h5><p>   <code>yum update -y</code>    </p>
+<h5 id="安装编译python3的依赖"><a href="#安装编译python3的依赖" class="headerlink" title="安装编译python3的依赖"></a>安装编译python3的依赖</h5>   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">yum -y install \</span><br><span class="line">zlib-devel \</span><br><span class="line">bzip2-devel \</span><br><span class="line">openssl-devel \</span><br><span class="line">ncurses-devel \</span><br><span class="line">sqlite-devel \</span><br><span class="line">readline-devel \</span><br><span class="line">tk-devel \</span><br><span class="line">libffi-devel \</span><br><span class="line">wget \</span><br><span class="line">gcc \</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make libffi-devel</span><br></pre></td></tr></table></figure>
 
@@ -135,14 +134,13 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Collecting setuptools</span><br><span class="line">Collecting pip</span><br><span class="line">Installing collected packages: setuptools, pip</span><br><span class="line">Successfully installed pip-9.0.1 setuptools-28.8.0</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>创建python3的软连接</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/<span class="built_in">local</span>/python3/bin/python3.6 /usr/bin/python3</span><br></pre></td></tr></table></figure>
+<p><code>ln -s /usr/local/python3/bin/python3.6 /usr/bin/python3</code></p>
 </li>
 <li><p>创建pip3的软链接</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/<span class="built_in">local</span>/python3/bin/pip3 /usr/bin/pip3</span><br></pre></td></tr></table></figure>
+<p><code>ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3</code></p>
 </li>
 <li><p>pip3升级</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install --upgrade pip</span><br></pre></td></tr></table></figure>
-
+<p><code>pip3 install --upgrade pip</code></p>
 </li>
 </ol>
 <p>至此，安装完成，简单验证。</p>
