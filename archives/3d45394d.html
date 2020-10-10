@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://voidwx.github.io">
-  <title>Archives: 2020/10 | Hexo</title>
+  <title>Java&amp;Spring注解 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://voidwx.github.io/archives/2020/10/index.html">
+  <meta name="description" content="Springboot注解@Component注解的含义一、注解分类  1、@controller:controller控制器层（注入服务） 2、@service：service服务层（注入dao） 3、 @repository：dao持久层（实现dao访问）  二、 @Component注解含义 @Component：标注Spring管理的Bean，试用@Component注解在一个类上，表示将此">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java&amp;Spring注解">
+<meta property="og:url" content="https://voidwx.github.io/archives/3d45394d.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Springboot注解@Component注解的含义一、注解分类  1、@controller:controller控制器层（注入服务） 2、@service：service服务层（注入dao） 3、 @repository：dao持久层（实现dao访问）  二、 @Component注解含义 @Component：标注Spring管理的Bean，试用@Component注解在一个类上，表示将此">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-08-24T02:59:29.000Z">
+<meta property="article:modified_time" content="2020-10-10T12:41:04.781Z">
 <meta property="article:author" content="voidwx">
+<meta property="article:tag" content="Spring">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -154,48 +159,157 @@
             <canvas data-colors="#eaeaea" data-sectionheight="100" data-contentid="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Java-Spring注解-md" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/archives/3ce02997.html" class="archive-article-date">
-  	<time datetime="2020-10-10T03:27:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-10</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/archives/3ce02997.html">SpringBoot入门</a>
+    <h1 class="article-title" itemprop="name">
+      Java&amp;Spring注解
     </h1>
   
 
-        <div class="article-info info-on-right">
+        
+        <a href="/archives/3d45394d.html" class="archive-article-date">
+  	<time datetime="2020-08-24T02:59:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-24</time>
+</a>
+        
+        <!-- 添加字数统计与阅读时间 -->
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">1.9k字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">7分</span>
+      </span>
+    </span>
+</div>
           
+          <!-- 添加完成 -->
+        
+          <span class="archive-article-date">
+              阅读量 <span id="busuanzi_value_page_pv"></span>
+          </span>
+        
+
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Springboot注解"><a href="#Springboot注解" class="headerlink" title="Springboot注解"></a>Springboot注解</h1><h2 id="Component注解的含义"><a href="#Component注解的含义" class="headerlink" title="@Component注解的含义"></a>@Component注解的含义</h2><p>一、注解分类</p>
+<blockquote>
+<p>1、@controller:controller控制器层（注入服务）</p>
+<p>2、@service：service服务层（注入dao）</p>
+<p>3、 @repository：dao持久层（实现dao访问）</p>
+</blockquote>
+<p>二、 @Component注解含义</p>
+<p>@Component：标注Spring管理的Bean，试用@Component注解在一个类上，表示将此类标记为Spring容器中的一个Bean。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Target</span>(&#123;ElementType.TYPE&#125;)</span><br><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="meta">@Documented</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Component &#123;</span><br><span class="line">    <span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> ""</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>三、基于@Component扩展的注解</p>
+<p><strong>@Repository</strong></p>
+<p>@Component注解的扩展，被@Repository注解的POJO类表示DAO层实现，从而见到该注解就想到DAO层实现，使用方式和@Component相同。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Target</span>(&#123;ElementType.TYPE&#125;)</span><br><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="meta">@Documented</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Repository &#123;</span><br><span class="line">    <span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> ""</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>@Service</strong></p>
+<p>@Component注解的扩展，被@Service注解的POJO类表示Service层实现，从而见到该注解就想到Service层实现，使用方式和@Component相同。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Target</span>(&#123;ElementType.TYPE&#125;)</span><br><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="meta">@Documented</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Service &#123;</span><br><span class="line">    <span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> ""</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>@Controller</strong></p>
+<p>@Component注解的扩展，被@Controller注解的类表示Web层实现，从而见到该注解就想到Web层实现，使用方式和@Component相同。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Target</span>(&#123;ElementType.TYPE&#125;)</span><br><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="meta">@Documented</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Controller &#123;</span><br><span class="line">    <span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> ""</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p> 使用@Component,@Service,@Controller,@Repository注解的类，表示把这些类纳入到spring容器中进行管理,同时也是表明把该类标记为Spring容器中的一个Bean。</p>
+</blockquote>
+<p>四、component的扫描组件</p>
+<p>引入component的扫描组件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;context:component-scan base-<span class="keyword">package</span>=”com.mmnc”&gt;</span><br></pre></td></tr></table></figure>
+
+<p>其中base-package为需要扫描的包（含所有子包）<br>1、@Service用于标注业务层组件<br>2、@Controller用于标注控制层组件(如struts中的action)<br>3、@Repository用于标注数据访问组件，即DAO组件.<br>4、@Component泛指组件，当组件不好归类的时候，我们可以使用这个注解进行标注，标识为一个Bean。  </p>
+<p>可以使用以下方式指定初始化方法和销毁方法（方法名任意）：<br>@PostConstruct<br>public void init() { } </p>
+<p><strong>附注：DAO层，Service层，Controller层、View层</strong></p>
+<ol>
+<li>DAO层：DAO层主要是做<strong>数据持久层</strong>的工作，负责<strong>与数据库进行联络</strong>的一些任务都封装在此，DAO层的设计首先是设计DAO的接口，然后在Spring的配置文件中定义此接口的实现类，然后就可在模块中调用此接口来进行数据业务的处理，而不用关心此接口的具体实现类是哪个类，显得结构非常清晰，DAO层的数据源配置，以及有关数据库连接的参数都在Spring的配置文件中进行配置。  </li>
+<li>Service层：Service层主要<strong>负责业务模块</strong>的逻辑应用设计。同样是首先设计接口，再设计其实现的类，接着再Spring的配置文件中配置其实现的关联。这样我们就可以在应用中调用Service接口来进行业务处理。Service层的业务实现，具体要调用到已定义的DAO层的接口，封装Service层的业务逻辑有利于通用的业务逻辑的独立性和重复利用性，程序显得非常简洁。  </li>
+<li>Controller层:Controller层负责具体的<strong>业务模块流程的控制</strong>，在此层里面要调用Serice层的接口来控制业务流程，控制的配置也同样是在Spring的配置文件里面进行，针对具体的业务流程，会有不同的控制器，我们具体的设计过程中可以将流程进行抽象归纳，设计出可以重复利用的子单元流程模块，这样不仅使程序结构变得清晰，也大大减少了代码量。  </li>
+<li>View层 此层与控制层结合比较紧密，需要二者结合起来协同工发。View层主要负责前台jsp页面的表示，  </li>
+<li>DAO层，Service层这两个层次都可以单独开发，互相的耦合度很低，完全可以独立进行，这样的一种模式在开发大项目的过程中尤其有优势，Controller，View层因为耦合度比较高，因而要结合在一起开发，但是也可以看作一个整体独立于前两个层进行开发。这样，在层与层之前我们只需要知道接口的定义，调用接口即可完成所需要的逻辑单元应用，一切显得非常清晰简单。  </li>
+<li>DAO设计的总体规划需要和设计的表，和实现类之间一一对应。  </li>
+<li>DAO层所定义的接口里的方法都大同小异，这是由我们在DAO层对数据库访问的操作来决定的，对数据库的操作，我们基本要用到的就是新增，更新，删除，查询等方法。因而DAO层里面基本上都应该要涵盖这些方法对应的操作。除此之外，可以定义一些自定义的特殊的对数据库访问的方法。  </li>
+<li>Service层是建立在DAO层之上的，建立了DAO层后才可以建立Service层，而Service层又是在Controller层之下的，因而Service层应该既调用DAO层的接口，又要提供接口给Controller层的类来进行调用，它刚好处于一个中间层的位置。每个模型都有一个Service接口，每个接口分别封装各自的业务处理方法。  </li>
+<li>在DAO层定义的一些方法，在Service层并没有使用，那为什么还要在DAO层进行定义呢？这是由我们定义的需求逻辑所决定的。DAO层的操作 经过抽象后基本上都是通用的，因而我们在定义DAO层的时候可以将相关的方法定义完毕，这样的好处是在对Service进行扩展的时候不需要再对DAO层进行修改，提高了程序的可扩展性。 </li>
+</ol>
+<p><strong>1.Dao层</strong>：全称Data Access Object。Dao层比较底层，负责与数据库打交道具体到对某个表、某个实体的增删改查<br><strong>2.Service层</strong>：又叫服务层或业务层，封装Dao层的操作，使一个方法对外表现为实现一种功能，例如：网购生成订单时，不仅要插入订单信息记录，还要查询商品库存是否充足，购买是否超过限制等等。<br><strong>3.Controller层</strong>：业务控制层，负责接收数据和请求，并且调用Service层实现这个业务逻辑。</p>
+<p><strong>Controller层</strong>像是一个<strong>服务员</strong>，他把客人（前端）点的菜（数据、请求的类型等）进行汇总什么口味、咸淡、量的多少，交给<strong>厨师长</strong>（Service层），厨师长则告诉沾板厨师（Dao 1）、汤料房（Dao 2）、配菜厨师（Dao 3）等（统称Dao层）我需要什么样的半成品，<strong>副厨们</strong>（Dao层）就负责完成<strong>厨师长</strong>（Service）交代的任务。</p>
+<h2 id="Autowired"><a href="#Autowired" class="headerlink" title="@Autowired"></a>@Autowired</h2><p>@Autowired 注释，它可以对类成员变量、方法及构造函数进行标注，完成自动装配的工作。 通过 @Autowired的使用来消除 set ，get方法。</p>
+<p><strong>使用@Autowired的原理</strong></p>
+<p>在启动spring IoC时，容器自动装载了一个<code>AutowiredAnnotationBeanPostProcessor</code>后置处理器，当容器扫描到<code>@Autowied</code>、<code>@Resource</code>或<code>@Inject</code>时，就会在IoC容器自动查找需要的bean，并装配给该对象的属性。</p>
+<p><strong>注意事项：</strong></p>
+<p>在使用@Autowired时，首先在容器中查询对应类型的bean</p>
+<p>如果查询结果刚好为一个，就将该bean装配给@Autowired指定的数据</p>
+<p>如果查询的结果不止一个，那么@Autowired会根据<strong>名称</strong>来查找，如</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span>  <span class="comment">//自动从IOC中查找nettyClientFilter的配置，并返回给该属性</span></span><br><span class="line"><span class="keyword">private</span> NettyClientFilter nettyClientFilter;</span><br></pre></td></tr></table></figure>
+
+<p>如果查询的结果为空，那么会抛出异常。解决方法时，使用required=false</p>
+
+      
+      <!-- 此处添加版权信息 -->
+      
+      
+        <div class="declare" hidden="hidden"></div>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -208,17 +322,146 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://voidwx.github.io/archives/3d45394d.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/archives/1f4d6f50.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          阿里云运行疫情通脚本
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/archives/30f9d222.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Spring概述</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Springboot注解"><span class="toc-number">1.</span> <span class="toc-text">Springboot注解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Component注解的含义"><span class="toc-number">1.1.</span> <span class="toc-text">@Component注解的含义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Autowired"><span class="toc-number">1.2.</span> <span class="toc-text">@Autowired</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
+  
+    <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+
+<script>
+var gitalk = new Gitalk({
+  clientID: '6c206ad2dd9afe69b551',
+  clientSecret: '7cd351783c87a46bb1ea76ddbf97a5bbfdfa230e',
+  repo: 'gitalk',
+  owner: 'voidwx',
+  admin: ['voidwx'],
+  id: md5(window.location.pathname),
+  distractionFreeMode: 'true' //这里需要加引号
+})
+
+gitalk.render('gitalk-container')
+</script>
+  
 
 
           </div>
@@ -270,8 +513,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

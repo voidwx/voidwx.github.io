@@ -6,15 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://voidwx.github.io">
-  <title>Archives: 2020/10 | Hexo</title>
+  <title>阿里云运行疫情通脚本 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://voidwx.github.io/archives/2020/10/index.html">
+  <meta name="description" content="系统环境：阿里云Centos7.3    软件环境：Python3.6.4   Python包：requests   抓包工具：Fiddler   一、疫情通脚本1.1 原理使用Fiddler抓取疫情通在提交时候的数据包，获取相关字节参数，伪造数据包，并将其发送至服务器中。 1.2 步骤 登录信息和数据包  疫情通的登录网址为https:&#x2F;&#x2F;xxcapp.xidian.edu.cn&#x2F;uc&#x2F;w">
+<meta property="og:type" content="article">
+<meta property="og:title" content="阿里云运行疫情通脚本">
+<meta property="og:url" content="https://voidwx.github.io/archives/1f4d6f50.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="系统环境：阿里云Centos7.3    软件环境：Python3.6.4   Python包：requests   抓包工具：Fiddler   一、疫情通脚本1.1 原理使用Fiddler抓取疫情通在提交时候的数据包，获取相关字节参数，伪造数据包，并将其发送至服务器中。 1.2 步骤 登录信息和数据包  疫情通的登录网址为https:&#x2F;&#x2F;xxcapp.xidian.edu.cn&#x2F;uc&#x2F;w">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/%E8%A5%BF%E7%94%B5%E7%96%AB%E6%83%85%E9%80%9A%E7%99%BB%E5%BD%95%E5%88%9D%E5%A7%8B%E7%95%8C%E9%9D%A2.png">
+<meta property="og:image" content="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/image-20200904145939916.png">
+<meta property="og:image" content="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/image-20200904150329288.png">
+<meta property="og:image" content="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/image-20200904151042916.png">
+<meta property="og:image" content="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/image-20200904151416597.png">
+<meta property="og:image" content="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/image-20200904152804569.png">
+<meta property="article:published_time" content="2020-09-03T08:53:39.000Z">
+<meta property="article:modified_time" content="2020-10-10T12:41:04.778Z">
 <meta property="article:author" content="voidwx">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Fildder">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/%E8%A5%BF%E7%94%B5%E7%96%AB%E6%83%85%E9%80%9A%E7%99%BB%E5%BD%95%E5%88%9D%E5%A7%8B%E7%95%8C%E9%9D%A2.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,71 +167,446 @@
             <canvas data-colors="#eaeaea" data-sectionheight="100" data-contentid="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-阿里云运行疫情通脚本-md" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/archives/3ce02997.html" class="archive-article-date">
-  	<time datetime="2020-10-10T03:27:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-10</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/archives/3ce02997.html">SpringBoot入门</a>
+    <h1 class="article-title" itemprop="name">
+      阿里云运行疫情通脚本
     </h1>
   
 
-        <div class="article-info info-on-right">
+        
+        <a href="/archives/1f4d6f50.html" class="archive-article-date">
+  	<time datetime="2020-09-03T08:53:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-03</time>
+</a>
+        
+        <!-- 添加字数统计与阅读时间 -->
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">1.8k字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">7分</span>
+      </span>
+    </span>
+</div>
           
+          <!-- 添加完成 -->
+        
+          <span class="archive-article-date">
+              阅读量 <span id="busuanzi_value_page_pv"></span>
+          </span>
+        
+
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <table>
+<thead>
+<tr>
+<th align="left"><strong>系统环境：阿里云Centos7.3</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>软件环境：Python3.6.4</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>Python包：requests</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>抓包工具：Fiddler</strong></td>
+</tr>
+</tbody></table>
+<h2 id="一、疫情通脚本"><a href="#一、疫情通脚本" class="headerlink" title="一、疫情通脚本"></a>一、疫情通脚本</h2><h3 id="1-1-原理"><a href="#1-1-原理" class="headerlink" title="1.1 原理"></a>1.1 原理</h3><p>使用Fiddler抓取疫情通在提交时候的数据包，获取相关字节参数，伪造数据包，并将其发送至服务器中。</p>
+<h3 id="1-2-步骤"><a href="#1-2-步骤" class="headerlink" title="1.2 步骤"></a>1.2 步骤</h3><ol>
+<li><p><strong>登录信息和数据包</strong></p>
+<ol>
+<li><p>疫情通的登录网址为<a href="https://xxcapp.xidian.edu.cn/uc/wap/login" target="_blank" rel="external nofollow noopener noreferrer">https://xxcapp.xidian.edu.cn/uc/wap/login</a> ，该页面有两个相关的登录信息：账号，密码。</p>
+<p><img src="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/%E8%A5%BF%E7%94%B5%E7%96%AB%E6%83%85%E9%80%9A%E7%99%BB%E5%BD%95%E5%88%9D%E5%A7%8B%E7%95%8C%E9%9D%A2.png" alt="疫情通初始登录界面"></p>
+</li>
+<li><p>在填写完之后点击登录，使用Fiddler抓取数据包，得到数据包的格式。</p>
+<p><img src="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/image-20200904145939916.png" alt="Fiddler抓取疫情通登录数据过程"></p>
+<p>上图是在点击之后数据包的去向，登录信息数据包去往<a href="https://xxcapp.xidian.edu.cn/uc/wap/login/check" target="_blank" rel="external nofollow noopener noreferrer">https://xxcapp.xidian.edu.cn/uc/wap/login/check</a> ，通过之后进行登录页面的跳转。</p>
+<p><img src="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/image-20200904150329288.png" alt="疫情通登录数据包信息"></p>
+<p>点击第一条数据和<code>WebForms</code>按钮，可以得到我们提交的数据包格式和信息，即直接的<code>username</code>和<code>password</code>。根据以上信息，我们可以构造用户登录数据包。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">userdata = &#123;</span><br><span class="line">    <span class="string">"username"</span>: <span class="string">"20151213545"</span>,</span><br><span class="line">    <span class="string">"password"</span>: <span class="string">"zxcv123bnm"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对提交数据包进行抓取，得到每次提交的数据包具体内容</p>
+<p>填写疫情通的网址为<a href="https://xxcapp.xidian.edu.cn/ncov/wap/default/index" target="_blank" rel="external nofollow noopener noreferrer">https://xxcapp.xidian.edu.cn/ncov/wap/default/index</a> ，在填写完相关信息之后，点击提交，使用Fiddler查看数据提交过程。</p>
+<p><img src="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/image-20200904151042916.png" alt="疫情通数据提交过程"></p>
+<p>可以看到数据被提交至<a href="https://xxcapp.xidian.edu.cn/ncov/wap/default/save" target="_blank" rel="external nofollow noopener noreferrer">https://xxcapp.xidian.edu.cn/ncov/wap/default/save</a> ，查看该条数据的具体内容，可以看到如下的数据参数和数据包结构:</p>
+<p><img src="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/image-20200904151416597.png" alt="疫情通提交数据包"></p>
+<p>我们可以构造这样的数据包：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">submitData = &#123;</span><br><span class="line">    <span class="string">"szgjcs"</span>: <span class="string">""</span>,</span><br><span class="line">    <span class="string">"szcs"</span>: <span class="string">""</span>,</span><br><span class="line">    <span class="string">"szgj"</span>: <span class="string">""</span>,</span><br><span class="line">    <span class="string">"zgfxdq"</span>:<span class="string">"0"</span>,</span><br><span class="line">    <span class="string">"mjry"</span>:<span class="string">"0"</span>,</span><br><span class="line">    <span class="string">"csmjry"</span>:<span class="string">"0"</span>,</span><br><span class="line">    <span class="string">"tw"</span>: <span class="string">"2"</span>,</span><br><span class="line">    <span class="string">"sfcxtz"</span>: <span class="string">"0"</span>,</span><br><span class="line">    <span class="string">"sfjcbh"</span>: <span class="string">"0"</span>,</span><br><span class="line">    <span class="string">"sfcxzysx"</span>: <span class="string">"0"</span>,</span><br><span class="line">    <span class="string">"qksm"</span>: <span class="string">""</span>,</span><br><span class="line">    <span class="string">"sfyyjc"</span>: <span class="string">"0"</span>,</span><br><span class="line">    <span class="string">"jcjgqr"</span>: <span class="string">"0"</span>,</span><br><span class="line">    <span class="string">"remark"</span>: <span class="string">""</span>,</span><br><span class="line">    <span class="string">"address"</span>: <span class="string">"陕西省西安市长安区兴隆街道西安电子科技大学长安校区A区家属楼11号楼"</span>,</span><br><span class="line">    <span class="string">"geo_api_info"</span>: <span class="string">'&#123;"type":"complete","position":&#123;"Q":34.120432671441,"R":108.82871663411498,"lng":108.828717,"lat":34.120433&#125;,"location_type":"html5","message":"Get ipLocation failed.Get geolocation success.Convert Success.Get address success.","accuracy":500,"isConverted":true,"status":1,"addressComponent":&#123;"citycode":"029","adcode":"610116","businessAreas":[],"neighborhoodType":"","neighborhood":"","building":"","buildingType":"","street":"雷甘路","streetNumber":"264号","country":"中国","province":"陕西省","city":"西安市","district":"长安区","township":"兴隆街道"&#125;,"formattedAddress":"陕西省西安市长安区兴隆街道西安电子科技大学长安校区A区家属楼11号楼","roads":[],"crosses":[],"pois":[],"info":"SUCCESS"&#125;'</span>,</span><br><span class="line">    <span class="string">"area"</span>: <span class="string">"陕西省 西安市 长安区"</span>,</span><br><span class="line">    <span class="string">"province"</span>: <span class="string">"陕西省"</span>,</span><br><span class="line">    <span class="string">"city"</span>: <span class="string">"西安市"</span>,</span><br><span class="line">    <span class="string">"sfzx"</span>: <span class="string">"0"</span>,</span><br><span class="line">    <span class="string">"sfjcwhry"</span>: <span class="string">"0"</span>,</span><br><span class="line">    <span class="string">"sfjchbry"</span>: <span class="string">"0"</span>,</span><br><span class="line">    <span class="string">"sfcyglq"</span>: <span class="string">"0"</span>,</span><br><span class="line">    <span class="string">"gllx"</span>: <span class="string">""</span>,</span><br><span class="line">    <span class="string">"glksrq"</span>: <span class="string">""</span>,</span><br><span class="line">    <span class="string">"jcbhlx"</span>: <span class="string">""</span>,</span><br><span class="line">    <span class="string">"jcbhrq"</span>: <span class="string">""</span>,</span><br><span class="line">    <span class="string">"ismoved"</span>: <span class="string">"0"</span>,</span><br><span class="line">    <span class="string">"bztcyy"</span>: <span class="string">""</span>,</span><br><span class="line">    <span class="string">"sftjhb"</span>: <span class="string">"0"</span>,</span><br><span class="line">    <span class="string">"sftjwh"</span>: <span class="string">"0"</span>,</span><br><span class="line">    <span class="string">"sfjcjwry"</span>: <span class="string">"0"</span>,</span><br><span class="line">    <span class="string">"jcjg"</span>: <span class="string">""</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>至此，完成数据信息获取过程</strong>。</p>
+<blockquote>
+<p>也可以使用浏览器的F12网络查看工具(网络)获取以上信息。</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p><strong>构造数据包&amp;&amp;发送数据包</strong></p>
+<p>整个流程来看，我们需要在保持登录状态，之后进行疫情通数据包的提交，我们使用<code>requests.session()</code>来进行会话状态的保持。</p>
+<ol>
+<li><p>发送用户登录数据包并保持会话状态：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response = session.post(loginUrl, data=userdata)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>跳转至疫情通界面，提交疫情通数据包，这里使用post提交：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">response = session.get(indexUrl)</span><br><span class="line">response = session.post(submitUrl, data=submitData)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p><strong>执行结果接收</strong></p>
+<p>在提交以上信息之后，其会返回结果通知信息，我们需要将这种信息以某种方式推送给自己，方便查看结果。</p>
+<p><img src="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/image-20200904152804569.png" alt="数据提交结果信息"></p>
+<ol>
+<li><p><a href="https://sc.ftqq.com/" target="_blank" rel="external nofollow noopener noreferrer">Server酱</a>可以将微信与某个URL进行绑定，之后向以下URL发一个GET或者POST请求，微信端即可收到相关信息。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://sc.ftqq.com/[SCKEY(登入后可见)].send</span><br></pre></td></tr></table></figure>
+
+<p>接受两个参数：</p>
+<ul>
+<li>text：消息标题，最长为256，必填。</li>
+<li>desp：消息内容，最长64Kb，可空，支持MarkDown。</li>
+</ul>
+</li>
+<li><p>注册登录账号，获取一个SCKEY，将上述步骤2中得到的结果发送的SCKEY，实现对微信端的通知。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">notifydata = &#123;</span><br><span class="line">        <span class="string">"text"</span>: response.text,</span><br><span class="line">        <span class="string">"desp"</span>: <span class="string">"签到"</span></span><br><span class="line">    &#125;</span><br><span class="line">    response = rq.post(notifyUrl, data=notifydata)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="1-3-完整代码"><a href="#1-3-完整代码" class="headerlink" title="1.3 完整代码"></a>1.3 完整代码</h3>   <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">import</span> requests <span class="keyword">as</span> rq</span><br><span class="line"></span><br><span class="line">session = rq.session()</span><br><span class="line">loginUrl = <span class="string">"https://xxcapp.xidian.edu.cn/uc/wap/login/check"</span></span><br><span class="line">indexUrl = <span class="string">"https://xxcapp.xidian.edu.cn/ncov/wap/default/index"</span></span><br><span class="line">submitUrl = <span class="string">"https://xxcapp.xidian.edu.cn/ncov/wap/default/save"</span></span><br><span class="line">notifyUrl = <span class="string">"https://sc.ftqq.com/SCU111996Tbbf7aac2cf33c897d35e3310a6cb52b55f506654c8d4d.send"</span></span><br><span class="line">yesterday = (datetime.datetime.now()-datetime.timedelta(days=<span class="number">1</span>)).strftime(<span class="string">"%Y%m%d"</span>)</span><br><span class="line">userdate = &#123;&#125; <span class="comment">#同上</span></span><br><span class="line">submitdata = &#123;&#125; <span class="comment">#同上</span></span><br><span class="line"></span><br><span class="line">response = session.post(loginUrl, data=userdata)</span><br><span class="line"><span class="keyword">if</span> response.status_code == <span class="number">200</span>:</span><br><span class="line">    response = session.get(indexUrl)</span><br><span class="line">    response = session.post(submitUrl, data=submitData)</span><br><span class="line">    notifydata = &#123;</span><br><span class="line">        <span class="string">"text"</span>: response.text,</span><br><span class="line">        <span class="string">"desp"</span>: <span class="string">"签到"</span></span><br><span class="line">    &#125;</span><br><span class="line">    response = rq.post(notifyUrl, data=notifydata)</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、Centos7安装python3"><a href="#二、Centos7安装python3" class="headerlink" title="二、Centos7安装python3"></a>二、Centos7安装python3</h2><h3 id="2-1-依赖安装"><a href="#2-1-依赖安装" class="headerlink" title="2.1 依赖安装"></a>2.1 依赖安装</h3><ol>
+<li><p><strong>yum更新</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum update -y</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>安装编译python3的依赖</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">yum -y install \</span><br><span class="line">zlib-devel \</span><br><span class="line">bzip2-devel \</span><br><span class="line">openssl-devel \</span><br><span class="line">openssl\</span><br><span class="line">ncurses-devel \</span><br><span class="line">sqlite-devel \</span><br><span class="line">readline-devel \</span><br><span class="line">tk-devel \</span><br><span class="line">libffi-devel \</span><br><span class="line">wget \</span><br><span class="line">gcc \</span><br><span class="line">   make</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="2-2-编译安装python"><a href="#2-2-编译安装python" class="headerlink" title="2.2 编译安装python"></a>2.2 编译安装python</h3><ol>
+<li><p><strong>下载<code>python3.6.4</code>源码</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tgz</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>解压</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf Python-3.6.3.tgz</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>进入解压后的目录，执行编译前的<code>configure</code>操作</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> Python-3.6.3 &amp;&amp; ./configure prefix=/usr/<span class="built_in">local</span>/python3</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>编译源码，在Python-3.6.3目录执行以下命令：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+
+<p>编译成功后提示以下信息,<code>setuptools</code>和<code>pip</code>都已经部署成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Collecting setuptools</span><br><span class="line">Collecting pip</span><br><span class="line">Installing collected packages: setuptools, pip</span><br><span class="line">Successfully installed pip-9.0.1 setuptools-28.8.0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>创建<code>python3</code>的软连接</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/<span class="built_in">local</span>/python3/bin/python3.6 /usr/bin/python3</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>创建<code>pip3</code>的软链接</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/<span class="built_in">local</span>/python3/bin/pip3 /usr/bin/pip3</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong><code>pip3</code>升级</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install --upgrade pip</span><br></pre></td></tr></table></figure>
+
+<p>至此，安装完成，简单验证。</p>
+</li>
+<li><p><strong>验证</strong></p>
+<ul>
+<li><code>python3.6</code>：<code>python3 -V</code></li>
+<li><code>pip3</code>：<code>pip3 -V</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="2-3-出现的问题"><a href="#2-3-出现的问题" class="headerlink" title="2.3 出现的问题"></a>2.3 出现的问题</h3><ol>
+<li><p>在运行<code>pip3</code>的时候出现<code>[ImportError: cannot import name HTTPSHandler](https://www.cnblogs.com/liangmingshen/p/9515355.html)</code></p>
+<ol>
+<li><p>原因在于<code>openssl</code>,<code>openssl-devel</code>两个文件包未正确安装或者安装顺序出错。使用以下命令来安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install openssl -y</span><br><span class="line">yum install openssl-devel -y</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在安装完成后，卸载<code>python3</code>，重新安装</p>
+</li>
+</ol>
+</li>
+<li><p><code>CentOs7</code>系统中预装<code>python2.7</code>和<code>pip2</code>，如果想要将默认的python和pip改为python3和pip3，在建立软链接时有个问题需要主要，应该先将python2.7备份为python2，pip备份为pip2，并修改yum的头部依赖文件(yum需要python2)的支持。</p>
+</li>
+</ol>
+<h2 id="三、crontab定时执行python脚本"><a href="#三、crontab定时执行python脚本" class="headerlink" title="三、crontab定时执行python脚本"></a>三、<code>crontab</code>定时执行python脚本</h2><h3 id="3-1-思路"><a href="#3-1-思路" class="headerlink" title="3.1 思路"></a>3.1 思路</h3><p>大体思路为先写一个 <code>shell</code> 脚本，脚本中执行 <code>python</code> 文件，然后定时执行 <code>shell</code> 脚本即可（直接执行python脚本可能会出错，原因未知）</p>
+<h3 id="3-2-步骤"><a href="#3-2-步骤" class="headerlink" title="3.2 步骤"></a>3.2 步骤</h3><ol>
+<li><p>创建脚本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir script &amp;&amp; vim yi_qing_tong_start.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>yi_qing_tong_start.sh</code>脚本中结合自身情况输入内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/bash</span></span><br><span class="line"><span class="comment">#cd /root/script 写有该行，在日志中可以看到运行情况，但是无法得到运行结果</span></span><br><span class="line">/usr/bin/python3 xw_yi_qing_tong.py</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用如下命令，编辑定时任务：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设定每天8点执行脚本，设置如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 8 * * * /root/script/yi_qing_tong_start.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>保存定时任务，几分钟之后自动生效。</p>
+<blockquote>
+<p>注意：所以的路径都使用据对路径，否则无效</p>
+</blockquote>
+</li>
+</ol>
+<p><a href="https://cloud.tencent.com/developer/article/1532149" target="_blank" rel="external nofollow noopener noreferrer">crontab定时执行python脚本不成功解决方案</a></p>
+<h3 id="3-3-问题"><a href="#3-3-问题" class="headerlink" title="3.3 问题"></a>3.3 问题</h3><ol>
+<li><p>在<code>systemctl start crond</code>启动<code>crond</code>服务时出现错误send-mail: fatal: parameter inet_interfaces: no local interface found for ::1。</p>
+<p>修改centos的postfix配置文件<code>vi  /etc/postfix/main.cf</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#将以下部分进行修改</span></span><br><span class="line">inet_interfaces = localhost</span><br><span class="line">inet_protocols = all</span><br><span class="line"><span class="comment">#修改为：</span></span><br><span class="line">inet_interfaces = all</span><br><span class="line">inet_protocols = all</span><br></pre></td></tr></table></figure>
+
+<p>重启服务<code>systemctl restart postfix</code>,可顺利启动<code>crond</code>服务。</p>
+</li>
+</ol>
+<h2 id="四、拓展"><a href="#四、拓展" class="headerlink" title="四、拓展"></a>四、拓展</h2><h3 id="4-1-软链接"><a href="#4-1-软链接" class="headerlink" title="4.1 软链接"></a>4.1 软链接</h3><p>创建软链接即用<code>ln -s</code> 原始文件或文件夹 目标文件或文件夹</p>
+<p>说明:因为空间有限,不改变原来程序文件，再继续读取/data/ftp目录内容，只需要在/data2/上面建立软连接. </p>
+<p><strong>建立软链接</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mv /data/ftp /data2/</span><br><span class="line">ln -s /data2/ftp  /data/ftp</span><br></pre></td></tr></table></figure>
+
+<p><strong>删除软连接</strong>,当删除链接文件时,需要注意不可将原始文件删去</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm  /data/ftp</span><br></pre></td></tr></table></figure>
+
+<p>#只是少了一个“ / ” 删除的 就是链接文件, 也就是在文件的最后不要加上”/“</p>
+
+      
+      <!-- 此处添加版权信息 -->
+      
+      
+        <div class="declare">
+          <strong>本文作者：</strong>
+          
+            voidwx
+          
+          <br>
+          <strong>本文链接：</strong>
+          https://voidwx.github.io/archives/1f4d6f50.html
+          <br>
+          <strong>版权声明：</strong>
+          本作品采用
+          <a rel="external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+          进行许可。转载请注明出处！
+          
+            <br>
+            <a rel="external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a>
+          
+        </div>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Fildder</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Java框架//" class="article-tag-list-link color2">Java框架</a>
+        			<a href="/categories/脚本//" class="article-tag-list-link color3">脚本</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://voidwx.github.io/archives/1f4d6f50.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/archives/3ce02997.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          SpringBoot入门
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/archives/3d45394d.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java&amp;Spring注解</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、疫情通脚本"><span class="toc-number">1.</span> <span class="toc-text">一、疫情通脚本</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-原理"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-步骤"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-完整代码"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 完整代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、Centos7安装python3"><span class="toc-number">2.</span> <span class="toc-text">二、Centos7安装python3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-依赖安装"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 依赖安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-编译安装python"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 编译安装python</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-出现的问题"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 出现的问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、crontab定时执行python脚本"><span class="toc-number">3.</span> <span class="toc-text">三、crontab定时执行python脚本</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-思路"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-步骤"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-问题"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、拓展"><span class="toc-number">4.</span> <span class="toc-text">四、拓展</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-软链接"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 软链接</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
+  
+    <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+
+<script>
+var gitalk = new Gitalk({
+  clientID: '6c206ad2dd9afe69b551',
+  clientSecret: '7cd351783c87a46bb1ea76ddbf97a5bbfdfa230e',
+  repo: 'gitalk',
+  owner: 'voidwx',
+  admin: ['voidwx'],
+  id: md5(window.location.pathname),
+  distractionFreeMode: 'true' //这里需要加引号
+})
+
+gitalk.render('gitalk-container')
+</script>
+  
 
 
           </div>
@@ -270,8 +658,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
