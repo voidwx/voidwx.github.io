@@ -24,7 +24,7 @@
 <meta property="og:image" content="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/springboot%E7%89%88%E6%9C%AC.jpg">
 <meta property="og:image" content="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/%E7%BC%96%E8%BE%91%E5%91%98%E5%B7%A5%E5%87%BA%E9%94%99.jpg">
 <meta property="article:published_time" content="2020-10-18T08:09:56.000Z">
-<meta property="article:modified_time" content="2020-10-18T11:08:47.201Z">
+<meta property="article:modified_time" content="2020-10-18T11:13:52.463Z">
 <meta property="article:author" content="voidwx">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="SpringBoot">
@@ -365,7 +365,7 @@
 <img src="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/springboot%E7%89%88%E6%9C%AC.jpg" style="zoom:50%;">
 
 <p>在pom.xml文件中主动将其改成自己想要的版本</p>
-<p>2、 Maven下载依赖慢**</p>
+<p>2、 <strong>Maven下载依赖慢</strong></p>
 <p>使用华为云或者阿里云的maven镜像</p>
 <p>在maven的setting.xml文件下插入</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">id</span>&gt;</span>huaweicloud<span class="tag">&lt;/<span class="name">id</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">url</span>&gt;</span>https://mirrors.huaweicloud.com/repository/maven/<span class="tag">&lt;/<span class="name">url</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -379,16 +379,18 @@
 <blockquote>
 <p>1、必须要有默认语言资源文件 —— xxx.properties<br>2、项目的配置文件中要指定语言资源文件的路径及默认语言资源文件的文件名（不带后缀）<br>  application.properties文件：spring.messages.basename=包名/文件名<br>  application.yml文件：<br>    spring:<br>     messages:<br>      basename: 包名/文件名<br>3、其他语言资源文件命名必须参照格式。比如中文：xxx_zh_CN.properties、英文：xxx_en_US.properties<br>4、必须要将资源文件保存在resource文件夹或其子文件夹下。</p>
 </blockquote>
-<p>4、 当出现以下问题时**，解决方法有两种：</p>
+<p>4、 当出现以下问题时，解决方法有两种：</p>
 <img src="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/编辑员工出错.jpg" style="zoom:67%;">
 
 <ol>
-<li><p>把表单中需要提交的数据按数据库中字段的顺序提交(此时的employee中还有birth字段)</p>
+<li><p>把表单中需要提交的数据按数据库中字段的顺序提交</p>
+<p>(此时的employee中还有birth字段)</p>
 <p><strong>描述</strong>：我在此处的错误是因为格式转换的问题而导致数据在提交的时候birth字段缺失，导致出错。具体表现为在修改界面显示的birth字段的格式为<code>yyyy-MM-dd HH:mm</code>，在添加页面中birth的添加格式为<code>yyyy/MM/dd HH:mm</code>，在提交时再进行birth格式的转换。由于修改编辑页面与添加员工页面是双合一页面，所以在表单进行put操作时，birth字段提交的数据格式为<code>yyyy/MM/dd</code>与<code>yyyy-MM-dd HH:mm</code>冲突，导致字段内容缺失</p>
 <p><strong>解决</strong>：在<code>application.properties</code>中添加下列语句，将整个过程中的日期格式进行固定：</p>
 <figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">spring.mvc.date-format</span>=<span class="string">yyyy-MM-dd</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>在表单对应的controller中添加BindingResult（强制将对应字段进行绑定，缺少就填null）</p>
+<li><p>在表单对应的controller中添加BindingResult</p>
+<p>（强制将对应字段进行绑定，缺少就填null）</p>
 </li>
 </ol>
 <p><strong>5、 Mybatis+Mysql在插入数据时中文乱码问题</strong>：mybatis向mysql中插入数据时，中文显示为’???’</p>
@@ -403,11 +405,8 @@
 <p>​    1. 检查xml文件的namespace是否正确</p>
 <p>​    2. Mapper.java的方法在Mapper.xml中没有，然后执行Mapper的方法会报此</p>
 <p>​    3. xxxMapper.java的方法返回值是List,而select元素没有正确配置ResultMap,或者只配置ResultType</p>
-<p>​    4. 如果你确认没有以上问题,请任意修改下对应的xml文件,比如删除一个空行,保存.问题解决</p>
-<ol start="5">
-<li>看下mapper的XML配置路径是否正确</li>
-</ol>
-<p><strong>7、使用Mybatis查询数据库，如何返回一个包含对象的查询结果</strong>，具体描述如下：</p>
+<pre><code>4. 如果你确认没有以上问题,请任意修改下对应的xml文件,比如删除一个空行,保存.问题解决
+ 5. 看下mapper的XML配置路径是否正确</code></pre><p><strong>7、使用Mybatis查询数据库，如何返回一个包含对象的查询结果</strong>，具体描述如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//employee类，其中包含Department类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="keyword">private</span> String lastName;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String email;</span><br><span class="line">    <span class="comment">//1 male, 0 female</span></span><br><span class="line">    <span class="keyword">private</span> Integer gender;</span><br><span class="line">    <span class="keyword">private</span> Department department;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>数据库中的employee存储的数据仅有<code>id lastNamr email gender departmentId</code>，如何将连表查询的结果封装到employee中？</p>
@@ -759,7 +758,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">SpringBoot</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -771,15 +774,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SpringBoot</a>
               </li>
              
               <li class="article-tag-list-item">
