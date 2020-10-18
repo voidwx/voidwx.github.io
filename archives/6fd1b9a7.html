@@ -6,15 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://voidwx.github.io">
-  <title>Archives: 2020/10 | Hexo</title>
+  <title>project-web-restfulcrud总结 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://voidwx.github.io/archives/2020/10/index.html">
+  <meta name="description" content="一、 概述1、描述该Project使用了SpringBoot、Mybits等知识完成了一个简单的crud程序。 2、演示大概演示如下：  登录界面     管理选项     操作界面     员工信息添加界面     员工信息修改界面    二、 环境该项目的环境如下：    类型 版本    IDE IDEA 2020.2.2   Maven 3.6.3   JDK 8   SpringBoot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="project-web-restfulcrud总结">
+<meta property="og:url" content="https://voidwx.github.io/archives/6fd1b9a7.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、 概述1、描述该Project使用了SpringBoot、Mybits等知识完成了一个简单的crud程序。 2、演示大概演示如下：  登录界面     管理选项     操作界面     员工信息添加界面     员工信息修改界面    二、 环境该项目的环境如下：    类型 版本    IDE IDEA 2020.2.2   Maven 3.6.3   JDK 8   SpringBoot">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/crud-login.jpg">
+<meta property="og:image" content="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/crud-dashboard.jpg">
+<meta property="og:image" content="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/crud-list.jpg">
+<meta property="og:image" content="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/crud-add.jpg">
+<meta property="og:image" content="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/crud-update.jpg">
+<meta property="og:image" content="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/crud%E7%BB%93%E6%9E%84.jpg">
+<meta property="og:image" content="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/springboot%E7%89%88%E6%9C%AC.jpg">
+<meta property="og:image" content="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/%E7%BC%96%E8%BE%91%E5%91%98%E5%B7%A5%E5%87%BA%E9%94%99.jpg">
+<meta property="article:published_time" content="2020-10-18T08:09:56.000Z">
+<meta property="article:modified_time" content="2020-10-18T11:08:47.201Z">
 <meta property="article:author" content="voidwx">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="SpringBoot">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/crud-login.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,36 +169,308 @@
             <canvas data-colors="#eaeaea" data-sectionheight="100" data-contentid="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-project-web-restfulcrud总结" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/archives/6fd1b9a7.html" class="archive-article-date">
-  	<time datetime="2020-10-18T08:09:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-18</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/archives/6fd1b9a7.html">project-web-restfulcrud总结</a>
+    <h1 class="article-title" itemprop="name">
+      project-web-restfulcrud总结
     </h1>
   
 
-        <div class="article-info info-on-right">
+        
+        <a href="/archives/6fd1b9a7.html" class="archive-article-date">
+  	<time datetime="2020-10-18T08:09:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-18</time>
+</a>
+        
+        <!-- 添加字数统计与阅读时间 -->
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">2.5k字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">10分</span>
+      </span>
+    </span>
+</div>
           
+          <!-- 添加完成 -->
+        
+          <span class="archive-article-date">
+              阅读量 <span id="busuanzi_value_page_pv"></span>
+          </span>
+        
+
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一、-概述"><a href="#一、-概述" class="headerlink" title="一、 概述"></a>一、 概述</h1><h2 id="1、描述"><a href="#1、描述" class="headerlink" title="1、描述"></a>1、描述</h2><p>该Project使用了SpringBoot、Mybits等知识完成了一个简单的crud程序。</p>
+<h2 id="2、演示"><a href="#2、演示" class="headerlink" title="2、演示"></a>2、演示</h2><p>大概演示如下：</p>
+<ol>
+<li>登录界面</li>
+</ol>
+<img src="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/crud-login.jpg" style="zoom:67%;">
+
+<ol start="2">
+<li>管理选项</li>
+</ol>
+<img src="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/crud-dashboard.jpg" style="zoom: 33%;">
+
+<ol start="3">
+<li>操作界面</li>
+</ol>
+<img src="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/crud-list.jpg" style="zoom:67%;">
+
+<ol start="4">
+<li>员工信息添加界面</li>
+</ol>
+<img src="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/crud-add.jpg" style="zoom:67%;">
+
+<ol start="5">
+<li>员工信息修改界面</li>
+</ol>
+<img src="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/crud-update.jpg" style="zoom:67%;">
+
+<h1 id="二、-环境"><a href="#二、-环境" class="headerlink" title="二、 环境"></a>二、 环境</h1><p>该项目的环境如下：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>IDE</td>
+<td>IDEA 2020.2.2</td>
+</tr>
+<tr>
+<td>Maven</td>
+<td>3.6.3</td>
+</tr>
+<tr>
+<td>JDK</td>
+<td>8</td>
+</tr>
+<tr>
+<td>SpringBoot</td>
+<td>1.5.10.RELEASE</td>
+</tr>
+<tr>
+<td>thymeleaf解析模板</td>
+<td>3.0.9.RELEASE</td>
+</tr>
+<tr>
+<td>bootstrap</td>
+<td>4.0.0</td>
+</tr>
+<tr>
+<td>jquery</td>
+<td>3.3.1</td>
+</tr>
+<tr>
+<td>druid</td>
+<td>1.1.23</td>
+</tr>
+<tr>
+<td>mybatis</td>
+<td>1.3.2</td>
+</tr>
+</tbody></table>
+<h1 id="三、-项目梳理"><a href="#三、-项目梳理" class="headerlink" title="三、 项目梳理"></a>三、 项目梳理</h1><p>项目整体目录如下：</p>
+<img src="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/crud%E7%BB%93%E6%9E%84.jpg" style="zoom:80%;">
+
+<h2 id="1、目录解释"><a href="#1、目录解释" class="headerlink" title="1、目录解释"></a>1、目录解释</h2><h3 id="1-java目录下"><a href="#1-java目录下" class="headerlink" title="1. java目录下"></a>1. java目录下</h3><p><strong>component:</strong> </p>
+<pre><code>+ `LoginHandlerInterceptor`:**拦截器**，提供登录检查，当为登录直接访问后续页面时，会将路径页面重定向至登录页面，使用`HttpServletRequest`来获取session实现检查
++ `MyErrorAttributes`：向容器中添加自定义属性，通过定制的`MyErrorAttributes`改变需要返回的内容
++ `MyLocalResolver`：解决页面国际化问题，该类主要是通过在`httpServletRequest`的参数上携带区域信息完成国际化</code></pre><p><strong>config：</strong></p>
+<pre><code>+ `DruidConfig`：配置数据连接池`Druid` 的监控，在此类中完成servlet和Filter的配置
++ `MyMvcConfig`：该项目前端的主要配置文件，其中配置路径信息和拦截器
++ `MyserverConfig`：一般IDEA会使用携带的servlet进行处理，这里是练习配置自己的servlet，即注册三大组件</code></pre><p><strong>controller</strong>：<strong>业务模块流程的控制</strong></p>
+<pre><code>+ `HelloController`：前期练习，Web端输入对应的路径返回对应的处理结果，其中`/hello`结合了自定义的Exception---`UserNotExistException`
++ `LoginController`: 登录流程处理，当用户在登录界面提交相关信息之后，程序来到此处，随后调用Service层的处理程序`adminService`，可完成登录验证，但是**密码明文传输**
++ `EmployeeController`：该项目的主要流程控制模块，通过在Web页面中点击不同的按钮选项进入不同的路径，之后调用不同的Service层处理程序
++ `MyExceptionHandler`: 自定义错误处理机制，与`MyErrorAttributes`以及`UserNotExistException`共同完成处理</code></pre><p>exception：自定义错误</p>
+<ul>
+<li><code>UserNotExistException</code>：定义了一种错误类型</li>
+</ul>
+<p>servlet、filter、listener：自定义servlet三大组件</p>
+<ul>
+<li><code>MyServlet</code></li>
+<li><code>MyFilter</code></li>
+<li><code>MyListener</code></li>
+</ul>
+<p>pojo:实体类</p>
+<ul>
+<li><code>Admin</code>：类中属性<code>name</code>&amp;<code>password</code>与数据库中存储名称基本一致</li>
+<li><code>Employee</code>:类中属性<code>id</code>&amp;<code>lastName</code>&amp;<code>email</code>&amp;<code>gender</code>&amp;<code>department</code>与数据库存储内容不一致，数据<code>department</code>部分仅存<code>departmentId</code></li>
+<li><code>Department</code>:类中属性<code>id</code>&amp;<code>departmentName</code>与数据库中存储名称基本一致</li>
+</ul>
+<p>service:业务模块的逻辑应用设计,首先设计接口，再设计其实现的类</p>
+<ul>
+<li>接口：<ul>
+<li><code>AdminService</code>:登录方法，处理<code>LoginController</code>的请求</li>
+<li><code>EmployeeService</code>：接口满足<code>EmployeeController</code>中的请求</li>
+<li><code>DepartmentService</code>：本项目中未涉及到该部分，为空</li>
+</ul>
+</li>
+<li>实现类impl<ul>
+<li><code>AdminServiceImpl</code>：可实现登录验证（伪），返回下一步跳转的页面</li>
+<li><code>EmployeeServiceImpl</code>：可以实现增删改查，返回下一步跳转的页面</li>
+</ul>
+</li>
+</ul>
+<p>mapper（DAO）：数据处理接口层，与数据库进行交互</p>
+<ul>
+<li><code>AdminDAO</code>：设计了<code>Admin</code>的password查询接口</li>
+<li><code>DePartmentDAO</code>：设计了查询全部/某个部门信息的接口</li>
+<li><code>EmployeeDAO</code>：设计了对用户增删改查的接口</li>
+</ul>
+<h3 id="2-resources"><a href="#2-resources" class="headerlink" title="2. resources"></a>2. resources</h3><p><code>i18n</code>：实现国际化，即中英文切换，<code>MyLocalResolver</code>中调用，但还需现在<code>application.properties</code>中配置<code>spring.messages.basename=i18n/login</code></p>
+<p><code>mybatis:mapper</code>层的具体sql实现，具体表现为：<code>mapper.AdminDAo.xml</code>等，还可按需配置<code>mybatis-config.xml</code>文件(如驼峰命名法转换)</p>
+<p>static.asserts:静态资源css、img、js</p>
+<p>templates：thymeleaf模板的扫描目录，主要存放前端界面</p>
+<p><code>application.properties/application.yml</code>:项目全局配置</p>
+<h2 id="2、装配问题"><a href="#2、装配问题" class="headerlink" title="2、装配问题"></a>2、装配问题</h2><h3 id="1-controller"><a href="#1-controller" class="headerlink" title="1. controller"></a>1. controller</h3><ol>
+<li>在controller层的每一controller要想使其起作用，需要在类前加上注解<code>@Controller</code>，标识这是一个controller，其中<code>@RestController</code>等于<code>Controller</code>+<code>ResponseBody</code></li>
+<li>对于不同的路径请求，有<code>@PostMapping</code> <code>@GetMapping</code> <code>PutMapping</code> <code>DeleteMapping</code>以及朴实无华<code>@RequestMapping</code></li>
+<li>redirect: 表示重定向到一个地址 /表示当前路径项目;  forward: 表示转发到一个地址</li>
+</ol>
+<h3 id="2-Service"><a href="#2-Service" class="headerlink" title="2. Service"></a>2. Service</h3><p>在具体实现类前加上注解<code>@Service</code></p>
+<h3 id="3-Mapper"><a href="#3-Mapper" class="headerlink" title="3. Mapper"></a>3. Mapper</h3><p>对于mapper部分的装配有两种方法：</p>
+<ol>
+<li>对mapper文件夹下的每一文件前加上注解<code>@Mapper</code></li>
+<li>在SpringBoot的启动类前加上：<code>@MapperScan(value = &quot;xx.xx.xx.mapper&quot;)</code></li>
+</ol>
+<p>对resource文件夹下的mapper.xml需要在<code>namespace</code>部分指定对应的mapper接口文件，如<code>the.xw.springboot.mapper.AdminDAO</code></p>
+<h2 id="3、配置文件"><a href="#3、配置文件" class="headerlink" title="3、配置文件"></a>3、配置文件</h2><p>下面两者只是写法不同</p>
+<h3 id="1-application-properties"><a href="#1-application-properties" class="headerlink" title="1. application.properties"></a>1. application.properties</h3><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 应用名称</span></span><br><span class="line"><span class="meta">spring.application.name</span>=<span class="string">spring-boot-04-web-restfulcurd</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 应用服务 WEB 访问端口</span></span><br><span class="line"><span class="meta">server.port</span>=<span class="string">8080</span></span><br><span class="line"><span class="comment"># spring 静态资源扫描路径 建议不要写，让模板按照预定的路径进行寻找</span></span><br><span class="line"><span class="comment">#spring.resources.static_locations=classpath:/templates</span></span><br><span class="line"></span><br><span class="line"><span class="meta">spring.mvc.date-format</span>=<span class="string">yyyy-MM-dd</span></span><br><span class="line"><span class="comment">#规定不同内容分布，若此处生效，则在web上访问资源需要在路径之后加上/crud</span></span><br><span class="line"><span class="comment">#server.context-path = /crud</span></span><br><span class="line"><span class="comment">#国际化</span></span><br><span class="line"><span class="meta">spring.messages.basename</span>=<span class="string">i18n/login</span></span><br><span class="line"><span class="comment">#禁用thymeleaf缓存</span></span><br><span class="line"><span class="meta">spring.thymeleaf.cache</span> = <span class="string">false</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-apllication-yml"><a href="#2-apllication-yml" class="headerlink" title="2. apllication.yml"></a>2. apllication.yml</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 数据库配置</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">admin</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">admin123456</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://172.17.1.181:3306/restfulcrud?useUnicode=true&amp;characterEncoding=utf-8</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">com.alibaba.druid.pool.DruidDataSource</span></span><br><span class="line">    <span class="comment"># 数据源其他配置</span></span><br><span class="line">    <span class="attr">initialSize:</span> <span class="number">5</span></span><br><span class="line">    <span class="attr">minIdle:</span> <span class="number">5</span></span><br><span class="line">    <span class="attr">maxActive:</span> <span class="number">20</span></span><br><span class="line">    <span class="attr">maxWait:</span> <span class="number">60000</span></span><br><span class="line">    <span class="attr">timeBetweenEvictionRunsMillis:</span> <span class="number">60000</span></span><br><span class="line">    <span class="attr">minEvictableIdleTimeMillis:</span> <span class="number">300000</span></span><br><span class="line">    <span class="attr">validationQuery:</span> <span class="string">SELECT</span> <span class="number">1</span> <span class="string">FROM</span> <span class="string">DUAL</span></span><br><span class="line">    <span class="attr">testWhileIdle:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">testOnBorrow:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">testOnReturn:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">poolPreparedStatements:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment">#   配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙</span></span><br><span class="line">    <span class="attr">filters:</span> <span class="string">stat,wall,log4j</span></span><br><span class="line">    <span class="attr">maxPoolPreparedStatementPerConnectionSize:</span> <span class="number">20</span></span><br><span class="line">    <span class="attr">useGlobalDataSourceStat:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">connectionProperties:</span> <span class="string">druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># mybatis配置</span></span><br><span class="line"><span class="attr">mybatis:</span></span><br><span class="line">  <span class="attr">config-location:</span> <span class="string">classpath:mybatis/mybatis-config.xml</span></span><br><span class="line">  <span class="attr">mapper-locations:</span> <span class="string">classpath:mybatis/mapper/*.xml</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="四、问题"><a href="#四、问题" class="headerlink" title="四、问题"></a>四、问题</h1><p><strong>1、 在建立springboot项目时，只有springboot2.x</strong></p>
+<img src="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/springboot%E7%89%88%E6%9C%AC.jpg" style="zoom:50%;">
+
+<p>在pom.xml文件中主动将其改成自己想要的版本</p>
+<p>2、 Maven下载依赖慢**</p>
+<p>使用华为云或者阿里云的maven镜像</p>
+<p>在maven的setting.xml文件下插入</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">id</span>&gt;</span>huaweicloud<span class="tag">&lt;/<span class="name">id</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">url</span>&gt;</span>https://mirrors.huaweicloud.com/repository/maven/<span class="tag">&lt;/<span class="name">url</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>alimaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>aliyun maven<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span>        </span><br><span class="line">  <span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>3、在实现国际化的过程</strong>中，可能会出现<em>Thymeleaf读取国际化文本时出现??xxxxxx_zh_CN??问题</em>，对该项问题提出以下要点：</p>
+<blockquote>
+<p>1、必须要有默认语言资源文件 —— xxx.properties<br>2、项目的配置文件中要指定语言资源文件的路径及默认语言资源文件的文件名（不带后缀）<br>  application.properties文件：spring.messages.basename=包名/文件名<br>  application.yml文件：<br>    spring:<br>     messages:<br>      basename: 包名/文件名<br>3、其他语言资源文件命名必须参照格式。比如中文：xxx_zh_CN.properties、英文：xxx_en_US.properties<br>4、必须要将资源文件保存在resource文件夹或其子文件夹下。</p>
+</blockquote>
+<p>4、 当出现以下问题时**，解决方法有两种：</p>
+<img src="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/编辑员工出错.jpg" style="zoom:67%;">
+
+<ol>
+<li><p>把表单中需要提交的数据按数据库中字段的顺序提交(此时的employee中还有birth字段)</p>
+<p><strong>描述</strong>：我在此处的错误是因为格式转换的问题而导致数据在提交的时候birth字段缺失，导致出错。具体表现为在修改界面显示的birth字段的格式为<code>yyyy-MM-dd HH:mm</code>，在添加页面中birth的添加格式为<code>yyyy/MM/dd HH:mm</code>，在提交时再进行birth格式的转换。由于修改编辑页面与添加员工页面是双合一页面，所以在表单进行put操作时，birth字段提交的数据格式为<code>yyyy/MM/dd</code>与<code>yyyy-MM-dd HH:mm</code>冲突，导致字段内容缺失</p>
+<p><strong>解决</strong>：在<code>application.properties</code>中添加下列语句，将整个过程中的日期格式进行固定：</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">spring.mvc.date-format</span>=<span class="string">yyyy-MM-dd</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在表单对应的controller中添加BindingResult（强制将对应字段进行绑定，缺少就填null）</p>
+</li>
+</ol>
+<p><strong>5、 Mybatis+Mysql在插入数据时中文乱码问题</strong>：mybatis向mysql中插入数据时，中文显示为’???’</p>
+<p>​       对于数据库操作中出现的中文乱码，一般有两种情况：</p>
+<pre><code>+ 数据库本身设置
++ 连接数据库时，jdbc的编码设置</code></pre><p>对于第一种情况，可以查看自身的mysql设置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show variables like &#39;%character%&#39;</span><br></pre></td></tr></table></figure>
+
+<p>对于第二种情况在application.yml文件的url文件后添加<code>?useUnicode=true&amp;characterEncoding=utf-8</code></p>
+<p>在xml配置文件中符号<code>&amp;</code>需要转义为<code>&amp;amp;</code></p>
+<p><strong>6、对于mapper.xml文件运行时出现<code>invalid bound statement (not found)</code></strong>,大概以下几种解决方法：</p>
+<p>​    1. 检查xml文件的namespace是否正确</p>
+<p>​    2. Mapper.java的方法在Mapper.xml中没有，然后执行Mapper的方法会报此</p>
+<p>​    3. xxxMapper.java的方法返回值是List,而select元素没有正确配置ResultMap,或者只配置ResultType</p>
+<p>​    4. 如果你确认没有以上问题,请任意修改下对应的xml文件,比如删除一个空行,保存.问题解决</p>
+<ol start="5">
+<li>看下mapper的XML配置路径是否正确</li>
+</ol>
+<p><strong>7、使用Mybatis查询数据库，如何返回一个包含对象的查询结果</strong>，具体描述如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//employee类，其中包含Department类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="keyword">private</span> String lastName;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String email;</span><br><span class="line">    <span class="comment">//1 male, 0 female</span></span><br><span class="line">    <span class="keyword">private</span> Integer gender;</span><br><span class="line">    <span class="keyword">private</span> Department department;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>数据库中的employee存储的数据仅有<code>id lastNamr email gender departmentId</code>，如何将连表查询的结果封装到employee中？</p>
+<p>以查询所有employee信息为例(使用association或collection)：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--column数据库中的字段，property实体类中的属性--&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 返回数据中有对象时，使用association或者collection   --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">id</span>=<span class="string">"newResultMap"</span> <span class="attr">type</span>=<span class="string">"the.xw.springboot.pojo.Employee"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span> <span class="attr">column</span>=<span class="string">"id"</span> <span class="attr">jdbcType</span>=<span class="string">"INTEGER"</span> <span class="attr">property</span>=<span class="string">"id"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"lastName"</span> <span class="attr">jdbcType</span>=<span class="string">"VARCHAR"</span> <span class="attr">property</span>=<span class="string">"lastName"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"email"</span> <span class="attr">jdbcType</span>=<span class="string">"VARCHAR"</span> <span class="attr">property</span>=<span class="string">"email"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"gender"</span> <span class="attr">jdbcType</span>=<span class="string">"INTEGER"</span> <span class="attr">property</span>=<span class="string">"gender"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">association</span> <span class="attr">property</span>=<span class="string">"department"</span> <span class="attr">javaType</span>=<span class="string">"the.xw.springboot.pojo.Department"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"departmentId"</span> <span class="attr">property</span>=<span class="string">"id"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"departmentName"</span> <span class="attr">property</span>=<span class="string">"departmentName"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">association</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"getAllEmployee"</span>  <span class="attr">resultMap</span>= <span class="string">"newResultMap"</span> &gt;</span></span><br><span class="line">    select a.*, b.departmentName from  employee a left join department b on a.departmentId = b.id</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="五、不足"><a href="#五、不足" class="headerlink" title="五、不足"></a>五、不足</h1><ol>
+<li>登录认证形同虚设，密码明文传输，如何改进？</li>
+<li>数据传输怎样设置为json或者jwt格式进行传输？</li>
+<li>mybatis目前的使用效率很低，如何更好的使用？</li>
+<li>DTO、VO等如何规范使用？</li>
+</ol>
+
+      
+      <!-- 此处添加版权信息 -->
+      
+      
+        <div class="declare">
+          <strong>本文作者：</strong>
+          
+            voidwx
+          
+          <br>
+          <strong>本文链接：</strong>
+          https://voidwx.github.io/archives/6fd1b9a7.html
+          <br>
+          <strong>版权声明：</strong>
+          本作品采用
+          <a rel="external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+          进行许可。转载请注明出处！
+          
+            <br>
+            <a rel="external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a>
+          
+        </div>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -199,7 +486,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -212,66 +499,137 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://voidwx.github.io/archives/6fd1b9a7.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/archives/3ce02997.html" class="archive-article-date">
-  	<time datetime="2020-10-10T03:27:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-10</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/archives/3ce02997.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SpringBoot入门</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/archives/3ce02997.html">SpringBoot入门</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Java框架//" class="article-tag-list-link color2">Java框架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、-概述"><span class="toc-number">1.</span> <span class="toc-text">一、 概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、描述"><span class="toc-number">1.1.</span> <span class="toc-text">1、描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、演示"><span class="toc-number">1.2.</span> <span class="toc-text">2、演示</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、-环境"><span class="toc-number">2.</span> <span class="toc-text">二、 环境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、-项目梳理"><span class="toc-number">3.</span> <span class="toc-text">三、 项目梳理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、目录解释"><span class="toc-number">3.1.</span> <span class="toc-text">1、目录解释</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-java目录下"><span class="toc-number">3.1.1.</span> <span class="toc-text">1. java目录下</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-resources"><span class="toc-number">3.1.2.</span> <span class="toc-text">2. resources</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、装配问题"><span class="toc-number">3.2.</span> <span class="toc-text">2、装配问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-controller"><span class="toc-number">3.2.1.</span> <span class="toc-text">1. controller</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Service"><span class="toc-number">3.2.2.</span> <span class="toc-text">2. Service</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Mapper"><span class="toc-number">3.2.3.</span> <span class="toc-text">3. Mapper</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、配置文件"><span class="toc-number">3.3.</span> <span class="toc-text">3、配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-application-properties"><span class="toc-number">3.3.1.</span> <span class="toc-text">1. application.properties</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-apllication-yml"><span class="toc-number">3.3.2.</span> <span class="toc-text">2. apllication.yml</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、问题"><span class="toc-number">4.</span> <span class="toc-text">四、问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#五、不足"><span class="toc-number">5.</span> <span class="toc-text">五、不足</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
+  
+    <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+
+<script>
+var gitalk = new Gitalk({
+  clientID: '6c206ad2dd9afe69b551',
+  clientSecret: '7cd351783c87a46bb1ea76ddbf97a5bbfdfa230e',
+  repo: 'gitalk',
+  owner: 'voidwx',
+  admin: ['voidwx'],
+  id: md5(window.location.pathname),
+  distractionFreeMode: 'true' //这里需要加引号
+})
+
+gitalk.render('gitalk-container')
+</script>
+  
 
 
           </div>
@@ -323,8 +681,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
