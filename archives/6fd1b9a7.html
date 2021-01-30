@@ -24,7 +24,7 @@
 <meta property="og:image" content="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/springboot%E7%89%88%E6%9C%AC.jpg">
 <meta property="og:image" content="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/%E7%BC%96%E8%BE%91%E5%91%98%E5%B7%A5%E5%87%BA%E9%94%99.jpg">
 <meta property="article:published_time" content="2020-10-18T08:09:56.000Z">
-<meta property="article:modified_time" content="2020-10-18T11:13:52.463Z">
+<meta property="article:modified_time" content="2020-10-18T11:16:35.147Z">
 <meta property="article:author" content="voidwx">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="SpringBoot">
@@ -294,16 +294,25 @@
 <img src="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/crud%E7%BB%93%E6%9E%84.jpg" style="zoom:80%;">
 
 <h2 id="1、目录解释"><a href="#1、目录解释" class="headerlink" title="1、目录解释"></a>1、目录解释</h2><h3 id="1-java目录下"><a href="#1-java目录下" class="headerlink" title="1. java目录下"></a>1. java目录下</h3><p><strong>component:</strong> </p>
-<pre><code>+ `LoginHandlerInterceptor`:**拦截器**，提供登录检查，当为登录直接访问后续页面时，会将路径页面重定向至登录页面，使用`HttpServletRequest`来获取session实现检查
-+ `MyErrorAttributes`：向容器中添加自定义属性，通过定制的`MyErrorAttributes`改变需要返回的内容
-+ `MyLocalResolver`：解决页面国际化问题，该类主要是通过在`httpServletRequest`的参数上携带区域信息完成国际化</code></pre><p><strong>config：</strong></p>
-<pre><code>+ `DruidConfig`：配置数据连接池`Druid` 的监控，在此类中完成servlet和Filter的配置
-+ `MyMvcConfig`：该项目前端的主要配置文件，其中配置路径信息和拦截器
-+ `MyserverConfig`：一般IDEA会使用携带的servlet进行处理，这里是练习配置自己的servlet，即注册三大组件</code></pre><p><strong>controller</strong>：<strong>业务模块流程的控制</strong></p>
-<pre><code>+ `HelloController`：前期练习，Web端输入对应的路径返回对应的处理结果，其中`/hello`结合了自定义的Exception---`UserNotExistException`
-+ `LoginController`: 登录流程处理，当用户在登录界面提交相关信息之后，程序来到此处，随后调用Service层的处理程序`adminService`，可完成登录验证，但是**密码明文传输**
-+ `EmployeeController`：该项目的主要流程控制模块，通过在Web页面中点击不同的按钮选项进入不同的路径，之后调用不同的Service层处理程序
-+ `MyExceptionHandler`: 自定义错误处理机制，与`MyErrorAttributes`以及`UserNotExistException`共同完成处理</code></pre><p>exception：自定义错误</p>
+<ul>
+<li><code>LoginHandlerInterceptor</code>:<strong>拦截器</strong>，提供登录检查，当为登录直接访问后续页面时，会将路径页面重定向至登录页面，使用<code>HttpServletRequest</code>来获取session实现检查</li>
+<li><code>MyErrorAttributes</code>：向容器中添加自定义属性，通过定制的<code>MyErrorAttributes</code>改变需要返回的内容</li>
+<li><code>MyLocalResolver</code>：解决页面国际化问题，该类主要是通过在<code>httpServletRequest</code>的参数上携带区域信息完成国际化</li>
+</ul>
+<p><strong>config：</strong></p>
+<ul>
+<li><code>DruidConfig</code>：配置数据连接池<code>Druid</code> 的监控，在此类中完成servlet和Filter的配置</li>
+<li><code>MyMvcConfig</code>：该项目前端的主要配置文件，其中配置路径信息和拦截器</li>
+<li><code>MyserverConfig</code>：一般IDEA会使用携带的servlet进行处理，这里是练习配置自己的servlet，即注册三大组件</li>
+</ul>
+<p><strong>controller</strong>：<strong>业务模块流程的控制</strong></p>
+<ul>
+<li><code>HelloController</code>：前期练习，Web端输入对应的路径返回对应的处理结果，其中<code>/hello</code>结合了自定义的Exception—<code>UserNotExistException</code></li>
+<li><code>LoginController</code>: 登录流程处理，当用户在登录界面提交相关信息之后，程序来到此处，随后调用Service层的处理程序<code>adminService</code>，可完成登录验证，但是<strong>密码明文传输</strong></li>
+<li><code>EmployeeController</code>：该项目的主要流程控制模块，通过在Web页面中点击不同的按钮选项进入不同的路径，之后调用不同的Service层处理程序</li>
+<li><code>MyExceptionHandler</code>: 自定义错误处理机制，与<code>MyErrorAttributes</code>以及<code>UserNotExistException</code>共同完成处理</li>
+</ul>
+<p>exception：自定义错误</p>
 <ul>
 <li><code>UserNotExistException</code>：定义了一种错误类型</li>
 </ul>
@@ -638,7 +647,7 @@ gitalk.render('gitalk-container')
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-			&copy; 2020 voidwx
+			&copy; 2021 voidwx
 			<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
 			<script>
 				var now = new Date(); 
@@ -746,23 +755,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Spring</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">编程问题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SpringBoot</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -771,6 +772,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Fildder</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">SpringBoot</a>
               </li>
              
               <li class="article-tag-list-item">

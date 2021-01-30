@@ -22,7 +22,7 @@
 <meta property="og:image" content="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/image-20200904151416597.png">
 <meta property="og:image" content="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/image-20200904152804569.png">
 <meta property="article:published_time" content="2020-09-03T08:53:39.000Z">
-<meta property="article:modified_time" content="2020-10-10T12:41:04.778Z">
+<meta property="article:modified_time" content="2021-01-30T11:26:17.878Z">
 <meta property="article:author" content="voidwx">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="Fildder">
@@ -244,7 +244,7 @@
 <p>上图是在点击之后数据包的去向，登录信息数据包去往<a href="https://xxcapp.xidian.edu.cn/uc/wap/login/check" target="_blank" rel="external nofollow noopener noreferrer">https://xxcapp.xidian.edu.cn/uc/wap/login/check</a> ，通过之后进行登录页面的跳转。</p>
 <p><img src="https://voidewx-blog.oss-cn-beijing.aliyuncs.com/img/image-20200904150329288.png" alt="疫情通登录数据包信息"></p>
 <p>点击第一条数据和<code>WebForms</code>按钮，可以得到我们提交的数据包格式和信息，即直接的<code>username</code>和<code>password</code>。根据以上信息，我们可以构造用户登录数据包。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">userdata = &#123;</span><br><span class="line">    <span class="string">"username"</span>: <span class="string">"20151213545"</span>,</span><br><span class="line">    <span class="string">"password"</span>: <span class="string">"zxcv123bnm"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">userdata = &#123;</span><br><span class="line">    <span class="string">"username"</span>: <span class="string">"20151213545"</span>,</span><br><span class="line">    <span class="string">"password"</span>: <span class="string">""</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>对提交数据包进行抓取，得到每次提交的数据包具体内容</p>
 <p>填写疫情通的网址为<a href="https://xxcapp.xidian.edu.cn/ncov/wap/default/index" target="_blank" rel="external nofollow noopener noreferrer">https://xxcapp.xidian.edu.cn/ncov/wap/default/index</a> ，在填写完相关信息之后，点击提交，使用Fiddler查看数据提交过程。</p>
@@ -616,7 +616,7 @@ gitalk.render('gitalk-container')
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-			&copy; 2020 voidwx
+			&copy; 2021 voidwx
 			<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
 			<script>
 				var now = new Date(); 
@@ -724,23 +724,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Spring</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">编程问题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SpringBoot</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -749,6 +741,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Fildder</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">SpringBoot</a>
               </li>
              
               <li class="article-tag-list-item">
